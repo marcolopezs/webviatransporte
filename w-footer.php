@@ -28,7 +28,7 @@
             
             <!-- start:col -->
             <div class="col-sm-6 col-md-5">
-                <h4>About Weekly News</h4>
+                <h4>Sobre Vialidad y Transporte Latinoamericano</h4>
                 <p>Aliquam erat volutpat. Aliquam porta nibh id odio ornare ullamcorper. Etiam sit amet consectetur arcu. Suspendisse dolor nisl, eleifend quis metus a, sollicitudin semper orci.</p>
                 <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                 <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
