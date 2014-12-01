@@ -45,13 +45,13 @@
                         <div class="row">
                             
                             <!-- start:col -->
-                            <div class="col-md-12 separator-right">
+                            <div class="col-md-12">
                                 
                                 <article class="linkbox large cat-news">
                                     <a href="#">
-                                        <img src="images/dummy/560x390.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
+                                        <img src="/imagenes/upload/5.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
                                         <div class="overlay">
-                                            <h2>Budget drops lower benefits, adds $56 billion in spending</h2>
+                                            <h2>Dakar 2015: Principio y fin en Buenos Aires</h2>
                                         </div>
                                     </a>
                                     <a href="#" class="theme">
@@ -67,7 +67,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/6.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
@@ -84,7 +84,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/7.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
@@ -106,7 +106,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/8.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
@@ -123,7 +123,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/9.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
@@ -145,7 +145,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/10.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
@@ -162,7 +162,7 @@
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
                                             <a href="#">
-                                                <img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                                <img src="/imagenes/upload/11.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
                                                     <h3>Lorem ipsum dolor sit amet</h3>
                                                 </div>
