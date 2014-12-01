@@ -55,7 +55,7 @@
                                         </div>
                                     </a>
                                     <a href="#" class="theme">
-                                        News
+                                        Categoría
                                     </a>
                                 </article>
                                 
@@ -73,7 +73,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->
@@ -90,7 +90,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->                              
@@ -112,7 +112,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->
@@ -129,7 +129,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->                              
@@ -151,7 +151,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->
@@ -168,7 +168,7 @@
                                                 </div>
                                             </a>
                                             <a href="#" class="theme">
-                                                Sport
+                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->                              
@@ -187,7 +187,7 @@
                                         <section class="section-lifestyle news-layout">
                                             
                                             <header>
-                                                <h2><a href="#">Lifestyle</a></h2>
+                                                <h2><a href="#">Categoría</a></h2>
                                                 <span class="borderline"></span>
                                             </header>
                                         
@@ -239,7 +239,7 @@
                                         <section class="section-tech news-layout">
                                             
                                             <header>
-                                                <h2><a href="#">Tech</a></h2>
+                                                <h2><a href="#">Categoría</a></h2>
                                                 <span class="borderline"></span>
                                             </header>
                                         

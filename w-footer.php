@@ -7,14 +7,13 @@
         <nav id="foot-menu" class="hidden-xs">
             <ul class="clearfix">
                 <li class="home current"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li class="cat-news"><a href="#">News</a></li>
-                <li class="cat-sports"><a href="#">Sports</a></li>
-                <li class="cat-lifestyle"><a href="#">Lifestyle</a></li>
-                <li class="cat-showtime"><a href="#">Showtime</a></li>
-                <li class="cat-tech"><a href="#">Tech</a></li>
-                <li class="cat-business"><a href="#">Business</a></li>
-                <li class="cat-extra"><a href="#">Extra +</a></li>
-                <li class="options"><a href="#" class="scrollToTop">Back to top <span class="glyphicon glyphicon-chevron-up"></span></a></li>
+                <li class="cat-news"><a href="#">Categoría 1</a></li>
+                <li class="cat-sports"><a href="#">Categoría 2</a></li>
+                <li class="cat-lifestyle"><a href="#">Categoría 3</a></li>
+                <li class="cat-showtime"><a href="#">Categoría 4</a></li>
+                <li class="cat-tech"><a href="#">Categoría 5</a></li>
+                <li class="cat-business"><a href="#">Categoría 6</a></li>
+                <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
         </nav>
         
@@ -63,14 +62,8 @@
         <div class="copyright row">
         
             <!-- start:col -->
-            <div class="col-sm-6">
-                &copy; <a href="#">Weekly News</a> 2014. All rights reserved.
-            </div>
-            <!-- end:col -->
-            
-            <!-- start:col -->
-            <div class="col-sm-6 text-right">
-                Produced by <a href="http://themes.mipdesign.com">Mip Themes</a>.
+            <div class="col-sm-12">
+                &copy; <a href="#">Vialidad y Transporte Latinoamericano</a> 2014. Todos los derechos reservados.
             </div>
             <!-- end:col -->
 

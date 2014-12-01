@@ -11,7 +11,7 @@
     <section class="module-news top-margin">
         <!-- start:header -->
         <header>
-            <h2>Don't miss this stories</h2>
+            <h2>Lo más leído</h2>
             <span class="borderline"></span>
         </header>
         <!-- end:header -->
@@ -21,28 +21,28 @@
             <!-- start:article -->
             <article class="clearfix">
                 <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-sports"><a href="#">Sports</a></span></span>
+                <span class="published">Feb 18, 2014 <span class="category cat-sports"><a href="#">Categoría</a></span></span>
                 <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
             </article>
             <!-- end:article -->
             <!-- start:article -->
             <article class="clearfix">
                 <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-news"><a href="#">News</a></span></span>
+                <span class="published">Feb 18, 2014 <span class="category cat-news"><a href="#">Categoría</a></span></span>
                 <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
             </article>
             <!-- end:article -->
             <!-- start:article -->
             <article class="clearfix">
                 <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-lifestyle"><a href="#">Lifestyle</a></span></span>
+                <span class="published">Feb 18, 2014 <span class="category cat-lifestyle"><a href="#">Categoría</a></span></span>
                 <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
             </article>
             <!-- end:article -->
             <!-- start:article -->
             <article class="clearfix">
                 <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-showtime"><a href="#">Showtime</a></span></span>
+                <span class="published">Feb 18, 2014 <span class="category cat-showtime"><a href="#">Categoría</a></span></span>
                 <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
             </article>
             <!-- end:article -->
@@ -61,7 +61,7 @@
     <section class="module-photos">
         <!-- start:header -->
         <header>
-            <h2>Weekly photos</h2>
+            <h2>Galería de Fotos</h2>
             <span class="borderline"></span>
         </header>
         <!-- end:header -->

@@ -22,7 +22,7 @@
                             </div>
                         </a>
                         <a href="#" class="theme">
-                            Sport
+                            Categoría
                         </a>
                     </article>
 
@@ -40,7 +40,7 @@
                             </div>
                         </a>
                         <a href="#" class="theme">
-                            Sport
+                            Categoría
                         </a>
                     </article>
                     
@@ -52,7 +52,7 @@
                             </div>
                         </a>
                         <a href="#" class="theme">
-                            Sport
+                            Categoría
                         </a>
                     </article>
                     
@@ -64,7 +64,7 @@
                             </div>
                         </a>
                         <a href="#" class="theme">
-                            Sport
+                            Categoría
                         </a>
                     </article>
 
