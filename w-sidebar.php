@@ -3,7 +3,9 @@
     
     <!-- start:advertising -->
     <div class="ad">
-        <a href=""><img src="images/dummy/banner_300x250.png" width="300" height="250" alt=""></a>
+        <a href="http://issuu.com/revistatransp/docs/revista_transporte___turismo_octubr" target="_blank">
+            <img src="imagenes/upload/portada.jpg" width="300" alt="">
+        </a>
     </div>
     <!-- end:advertising -->
     
