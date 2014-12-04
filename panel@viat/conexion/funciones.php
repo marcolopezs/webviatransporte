@@ -528,29 +528,29 @@ function guardarImagen($imagenTmp, $imagen_carpeta, $imagenName){
 		if(file_exists($rutaImg))
 		{
 
-			//THUMB DESTACADA
+			//THUMB HOME MINI
 		    $thumb=PhpThumbFactory::create($rutaImg);
-		    $thumb->adaptiveResize(728,452);
-		    $thumb->save($rutaUpload.$imagen_carpeta."thumbdest/".$imagen."", "jpg");
+		    $thumb->adaptiveResize(100,80);
+		    $thumb->save($rutaUpload.$imagen_carpeta."thumbhmini/".$imagen."", "jpg");
 
-		    //THUMB NORMAL - VISTO
+		    //THUMB NOTICIA DESTACADA
 		    $thumb=PhpThumbFactory::create($rutaImg);
-		    $thumb->adaptiveResize(243,225);
-		    $thumb->save($rutaUpload.$imagen_carpeta."thumbnor/".$imagen."", "jpg");
+		    $thumb->adaptiveResize(819,452);
+		    $thumb->save($rutaUpload.$imagen_carpeta."thumbhdest/".$imagen."", "jpg");
 
-		    //THUMB DEVOCIONAL - EVENTOS
+		    //THUMB NOTICIA DESTACADA DERECHA
 		    $thumb=PhpThumbFactory::create($rutaImg);
-		    $thumb->adaptiveResize(385,250);
-		    $thumb->save($rutaUpload.$imagen_carpeta."thumbdeven/".$imagen."", "jpg");
+		    $thumb->adaptiveResize(350,150);
+		    $thumb->save($rutaUpload.$imagen_carpeta."thumbhdestri/".$imagen."", "jpg");
 
-		    //THUMB PORTADA
+		    //THUMB NOTICIA INFERIOR
 		    $thumb=PhpThumbFactory::create($rutaImg);
-		    $thumb->adaptiveResize(263,149);
-		    $thumb->save($rutaUpload.$imagen_carpeta."thumbport/".$imagen."", "jpg");
+		    $thumb->adaptiveResize(365,220);
+		    $thumb->save($rutaUpload.$imagen_carpeta."thumbhinf/".$imagen."", "jpg");
 
-		    //THUMB CATEGORIA - RELACIONADA
+		    //THUMB CATEGORIA
 		    $thumb=PhpThumbFactory::create($rutaImg);
-		    $thumb->adaptiveResize(290,210);
+		    $thumb->adaptiveResize(265,160);
 		    $thumb->save($rutaUpload.$imagen_carpeta."thumb/".$imagen."", "jpg");
 
 		    return $imagen;
@@ -561,25 +561,29 @@ function guardarImagen($imagenTmp, $imagen_carpeta, $imagenName){
 }
 
 function guardarImagenSolo($imagen, $imagen_carpeta){
-    //THUMB DESTACADA
+    //THUMB HOME MINI
     $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
-    $thumb->adaptiveResize(728,452);
-    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbdest/".$imagen."", "jpg");
-    //THUMB NORMAL - VISTO
+    $thumb->adaptiveResize(100,80);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbhmini/".$imagen."", "jpg");
+    
+    //THUMB NOTICIA DESTACADA
     $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
-    $thumb->adaptiveResize(243,225);
-    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbnor/".$imagen."", "jpg");
-    //THUMB DEVOCIONAL - EVENTOS
+    $thumb->adaptiveResize(819,452);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbhdest/".$imagen."", "jpg");
+    
+    //THUMB NOTICIA DESTACADA DERECHA
     $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
-    $thumb->adaptiveResize(385,250);
-    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbdeven/".$imagen."", "jpg");
-    //THUMB PORTADA
+    $thumb->adaptiveResize(350,150);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbhdestri/".$imagen."", "jpg");
+    
+    //THUMB NOTICIA INFERIOR
     $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
-    $thumb->adaptiveResize(263,149);
-    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbport/".$imagen."", "jpg");
-    //THUMB CATEGORIA - RELACIONADA
+    $thumb->adaptiveResize(65,220);
+    $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumbhinf/".$imagen."", "jpg");
+    
+    //THUMB CATEGORIA
     $thumb=PhpThumbFactory::create("../../../imagenes/upload/".$imagen_carpeta."".$imagen."");
-    $thumb->adaptiveResize(290,210);
+    $thumb->adaptiveResize(265,160);
     $thumb->save("../../../imagenes/upload/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 }
 
