@@ -3,6 +3,11 @@
     
     <!-- start:advertising -->
     <div class="ad">
+
+        <header>
+            <h2>Revista digital</h2>
+        </header>
+
         <a href="http://issuu.com/revistatransp/docs/revista_transporte___turismo_octubr" target="_blank">
             <img src="imagenes/upload/portada.jpg" width="300" alt="">
         </a>

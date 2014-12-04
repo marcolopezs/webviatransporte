@@ -14,7 +14,7 @@
                 <div class="col-sm-8">
                     
                     <article class="linkbox large cat-sports">
-                        <a href="#">
+                        <a href="noticia.php">
                             <img src="/imagenes/upload/1.jpg" width="819" height="452" alt="Responsive image" class="img-responsive" />
                             <div class="overlay">
                                 <h2>Catherine Houles: No todo va a ser de color de rosa</h2>

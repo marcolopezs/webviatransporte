@@ -7,12 +7,11 @@
             <input type="text" name="qsearch" placeholder="Search weekly news" />
         </form>
         <ul>
-            <li class="cat-news"><a href="#">Categoría 1</a></li>
-            <li class="cat-sports"><a href="#">Categoría 2</a></li>
-            <li class="cat-lifestyle"><a href="#">Categoría 3</a></li>
-            <li class="cat-showtime"><a href="#">Categoría 4</a></li>
-            <li class="cat-tech"><a href="#">Categoría 5</a></li>
-            <li class="cat-business"><a href="#">Categoría 6</a></li>
+            <li class="cat-news"><a href="#">Inicio</a></li>
+            <li class="cat-sports"><a href="#">Noticias</a></li>
+            <li class="cat-lifestyle"><a href="#">Rutas</a></li>
+            <li class="cat-showtime"><a href="#">Nosotros</a></li>
+            <li class="cat-tech"><a href="#">Contactenos</a></li>
         </ul>
         
     </div>
@@ -54,10 +53,21 @@
             <div class="row">
             
                 <!-- start:col -->
-                <div class="col-sm-6 col-md-12">
+                <div class="col-sm-6 col-md-8">
                     <!-- start:logo -->
                     <h1><a href="/"><img src="images/logo-color.png" alt="Weekly News" /></a></h1>
                     <!-- end:logo -->
+                </div>
+                <!-- end:col -->
+
+                <!-- start:col -->
+                <div class="col-sm-6 col-md-4 text-center">
+                    
+                    <form id="search-form">
+                        <input type="text" name="qsearch" placeholder="Buscar" />
+                        <button><span class="glyphicon glyphicon-search"></span></button>
+                    </form>
+                    
                 </div>
                 <!-- end:col -->
             
@@ -79,16 +89,25 @@
             <!-- start:menu -->
             <nav id="menu">
                 <ul class="nav clearfix">
-                    <li class="home"><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
-                    <li class="cat-news"><a href="#">Categoría 1</a></li>
-                    <li class="cat-sports"><a href="#">Categoría 2</a></li>
-                    <li class="cat-lifestyle"><a href="#">Categoría 3</a></li>
-                    <li class="cat-showtime"><a href="#">Categoría 4</a></li>
-                    <li class="cat-tech"><a href="#">Categoría 5</a></li>
-                    <li class="cat-business"><a href="#">Categoría 6</a></li>
-                </ul>                            
+                    <li class="home"><a href="/">Inicio</a></li>
+                    <li class="cat-news"><a href="#">Noticias</a></li>
+                    <li class="cat-sports"><a href="#">Rutas</a></li>
+                    <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
+                    <li class="cat-showtime"><a href="#">Contactenos</a></li>
+                </ul>
+
+                <!-- start:col -->
+                <div class="header-sm col-sm-6 col-md-5">
+                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+                    <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+                </div>
+                <!-- end:col -->
+
             </nav>
             <!-- end:menu -->
+
+            
             
         </div>
         <!-- end:container -->

@@ -2289,6 +2289,10 @@ a:hover .zoomix {
  * Photos module
  */
 
+#sidebar .module-photos{
+    padding-bottom: 20px;
+}
+
 #sidebar .module-photos p {
     font-size: 13px;
 }
@@ -2566,3 +2570,16 @@ a:hover .zoomix {
     }
 }
 
+.header-sm{
+    position: absolute;
+    right: 0;
+    margin: 10px 0;
+    top: 0;
+    text-align: right;
+}
+
+.header-sm a{
+    color: #fff !important;
+    margin: 0 6px;
+    font-size: 20px;
+}
