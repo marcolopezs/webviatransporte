@@ -1,3 +1,6 @@
+<?php
+require_once('panel@viat/conexion/conexion.php');
+?>
 <!DOCTYPE html >
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="es"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="es"> <![endif]-->
