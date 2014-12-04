@@ -1,3 +1,5 @@
+<base href="<?php echo $web; ?>">
+
 <!-- start:responsive web design -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- end:responsive web design -->
