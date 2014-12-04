@@ -8,7 +8,7 @@
         </form>
         <ul>
             <li class="cat-news"><a href="#">Inicio</a></li>
-            <li class="cat-sports"><a href="#">Noticias</a></li>
+            <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
             <li class="cat-lifestyle"><a href="#">Rutas</a></li>
             <li class="cat-showtime"><a href="#">Nosotros</a></li>
             <li class="cat-tech"><a href="#">Contactenos</a></li>
@@ -90,7 +90,7 @@
             <nav id="menu">
                 <ul class="nav clearfix">
                     <li class="home"><a href="/">Inicio</a></li>
-                    <li class="cat-news"><a href="#">Noticias</a></li>
+                    <li class="cat-news"><a href="categoria/1/noticias">Noticias</a></li>
                     <li class="cat-sports"><a href="#">Rutas</a></li>
                     <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
                     <li class="cat-showtime"><a href="#">Contactenos</a></li>
