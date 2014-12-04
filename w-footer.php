@@ -6,13 +6,11 @@
     
         <nav id="foot-menu" class="hidden-xs">
             <ul class="clearfix">
-                <li class="home current"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                <li class="cat-news"><a href="#">Categoría 1</a></li>
-                <li class="cat-sports"><a href="#">Categoría 2</a></li>
-                <li class="cat-lifestyle"><a href="#">Categoría 3</a></li>
-                <li class="cat-showtime"><a href="#">Categoría 4</a></li>
-                <li class="cat-tech"><a href="#">Categoría 5</a></li>
-                <li class="cat-business"><a href="#">Categoría 6</a></li>
+                <li class="home current"><a href="#">Inicio</a></li>
+                <li class="cat-news"><a href="#">Noticias</a></li>
+                <li class="cat-sports"><a href="#">Rutas</a></li>
+                <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
+                <li class="cat-showtime"><a href="#">Contactenos</a></li>
                 <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
         </nav>
