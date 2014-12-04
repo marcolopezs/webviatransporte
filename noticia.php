@@ -1,3 +1,72 @@
+<?php
+require_once("panel@viat/conexion/conexion.php");
+require_once("panel@viat/conexion/funciones.php");
+
+//VARIABLES DE URL
+$Req_Id=$_REQUEST["id"];
+$Req_Url=$_REQUEST["url"];
+
+//VARIABLES
+$header="interno";
+
+##################################################################################################################
+//NOTICIA
+$rst_noticia=mysql_query("SELECT * FROM vtr_noticia WHERE id=$Req_Id AND publicar=1 AND fecha_publicacion<='$fechaActual';", $conexion);
+$fila_noticia=mysql_fetch_array($rst_noticia);
+
+//VARIABLES DE NOTICIA
+$Noticia_id=$fila_noticia["id"];
+$Noticia_url=$fila_noticia["url"];
+$Noticia_titulo=$fila_noticia["titulo"];
+$Noticia_contenido=$fila_noticia["contenido"];
+$Noticia_categoria=$fila_noticia["categoria"];
+$Noticia_tags=$fila_noticia["tags"];
+$Noticia_fechaPub=$fila_noticia["fecha_publicacion"];
+$Noticia_imagen=$fila_noticia["imagen"];
+$Noticia_imagen_carpeta=$fila_noticia["imagen_carpeta"];
+$Noticia_video=$fila_noticia["video"];
+$Noticia_audio=$fila_noticia["audio"];
+$Noticia_contador=$fila_noticia["contador"]+1;
+
+//SEPARACION FECHA
+$Noticia_fechaPubSep=explode(" ", $Noticia_fechaPub);
+$Noticia_fecha=explode("-", $Noticia_fechaPubSep[0]);
+$NoticiaFecha=nombreFechaTotal($Noticia_fecha[0], $Noticia_fecha[1], $Noticia_fecha[2]);
+
+##################################################################################################################
+//SUMAR A CONTADOR
+$rst_noticiaCont=mysql_query("UPDATE vtr_noticia SET contador=$Noticia_contador WHERE id=$Req_Id;", $conexion);
+
+##################################################################################################################
+//NOTICIA - GALERIA DE FOTOS
+$rst_notFotos=mysql_query("SELECT * FROM vtr_noticia_slide WHERE noticia=$Noticia_id ORDER BY orden DESC", $conexion);
+$num_notFotos=mysql_num_rows($rst_notFotos);
+
+##################################################################################################################
+//NOTICIA - TAGS
+$tags=explode(",", $Noticia_tags);    //SEPARACION DE ARRAY CON COMAS
+$rst_tags=mysql_query("SELECT * FROM vtr_noticia_tags ORDER BY nombre ASC;", $conexion);
+
+##################################################################################################################
+//NOTICIA - CATEGORIA
+$rst_notCat=mysql_query("SELECT * FROM vtr_noticia_categoria WHERE id=$Noticia_categoria;", $conexion);
+$fila_notCat=mysql_fetch_array($rst_notCat);
+
+//VARIABLES DE NOTICIA - CATEGORIA
+$NotCat_id=$fila_notCat["id"];
+$NotCat_url=$fila_notCat["url"];
+$NotCat_titulo=$fila_notCat["categoria"];
+
+##################################################################################################################
+//NOTICIAS RELACIONADAS
+$rst_NotRel=mysql_query("SELECT * FROM vtr_noticia WHERE id<>$Req_Id AND categoria=$Noticia_categoria AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 6;", $conexion);
+
+##################################################################################################################
+//URLS
+$Noticia_UrlWeb=$web."noticia/".$Req_Id."-".$Req_Url;
+$Noticia_UrlImg=$web."imagenes/upload/".$Noticia_imagen_carpeta."".$Noticia_imagen;
+$Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
+?>
 <!DOCTYPE html >
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="es"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="es"> <![endif]-->
@@ -10,7 +79,7 @@
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title>Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $Noticia_titulo; ?> | Vialidad y Transporte Latinoamericano</title>
     <!-- end:page title -->
     
     <!-- start:meta info -->
@@ -43,24 +112,18 @@
                         <article id="article-post" class="cat-sports">
                             
                             <div class="head-image thumb-wrap relative">
-                                <a href="article-sport.php"><img src="imagenes/upload/12.jpg" alt="Responsive image" class="img-responsive" /></a>
+                                <img src="<?php echo $Noticia_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
                             </div>
                             
                             <header>
-                                <h1>Catherine Houles: No todo va a ser de color de rosa</h1>
+                                <h1><?php echo $Noticia_titulo; ?></h1>
                             </header>
                             
                             <p class="lead">
-                                Entre los 138 coches inscritos para tomar la salida del Dakar figura uno 100% femenino, el de Catherine Houlès y Sandrine Ridet. Estas incondicionales del Rally de las Gacelas tienen previsto dar que hablar en la tierra de los Pumas…
+                                
                             </p>
-                            
-                            <p>Confía plenamente en su “Zuzú”, como le gusta referirse cariñosamente a su vehículo, para la aventura prevista en enero. Catherine Houlès, con 12 participaciones en el Rally de las Gacelas en su haber, se atreve este año con el Dakar en un 4x4 Isuzu que luce orgulloso su color femenino. </p>
 
-                            <p>El equipo que estará presente en la salida de Buenos Aires el 4 de enero es 100% femenino, completado por su compañera Sandrine Ridet. “Sin embargo, no todo va a ser de color de rosa, seguro que nos toca sufrir”, comenta Catherine, consciente de la envergadura del desafío y de sus competencias a la hora de afrontarlo. Esta ex jinete tendrá ocasión de poner en práctica la base sólida adquirida durante el Rally de las Gacelas, que disputó por primera vez en 2002 (5 podios y una victoria en 2008).</p>
-
-                            <p>Hasta ahora, tan solo un equipo femenino ha logrado finalizar el Dakar en el continente americano (Florence Bourgnon y Clémence Joyeux en 2009). Sin embargo, no es algo que perciban como desventaja: “Es igual que un equipo masculino… ¡pero con chicas! Puede que tengamos menos fuerza física, pero eso nos obliga a buscar estrategias para evitar tener que sacar la pala, por ejemplo.</p>
-
-                            <p>También sabemos ser más pacientes y, claro, no vamos tan a lo bruto, al no producir testosterona”. Catherine y Sandrine no corren para medirse contra sus colegas, sino más bien para cruzar la meta final con su “Zuzú”. “Nuestro único objetivo es terminar. El mensaje que queremos transmitir es que las mujeres también pueden disputar un Dakar”.</p>
+                            <?php echo $Noticia_contenido; ?>
                             
                             <!-- start:article footer -->
                             <footer>
@@ -78,60 +141,51 @@
                         <!-- end:article-post -->
                         
                                                 <!-- start:related-posts -->
-                        <section style="display:none;" class="news-lay-3 bottom-margin">
+                        <section class="news-lay-3 bottom-margin">
                                             
                             <header>
-                                <h2><a href="#">Related posts</a></h2>
+                                <h2><a href="#">Noticias relacionadas</a></h2>
                                 <span class="borderline"></span>
                             </header>
                         
                             <!-- start:row -->
                             <div class="row">
+
+                                <?php while($fila_NotRel=mysql_fetch_array($rst_NotRel)){
+                                        $NotRel_id=$fila_NotRel["id"];
+                                        $NotRel_url=$fila_NotRel["url"];
+                                        $NotRel_titulo=$fila_NotRel["titulo"];
+                                        $NotRel_imagen=$fila_NotRel["imagen"];
+                                        $NotRel_imagen_carpeta=$fila_NotRel["imagen_carpeta"];
+                                        $NotRel_categoria=$fila_NotRel["categoria"];
+                                        $NotRel_fechaPub=$fila_NotRel["fecha_publicacion"];
+
+                                        //SEPARACION DE FECHA
+                                        $fechaPubSep=explode(" ", $NotRel_fechaPub);
+                                        $fechaSep=explode("-", $fechaPubSep[0]);
+                                        $FechaDia=$fechaSep[2];
+                                        $FechaMes=mesCorto($fechaSep[1]);
+                                        $FechaAnio=$fechaSep[0];
+
+                                        //URL
+                                        $NotRel_UrlWeb=$web."noticia/".$NotRel_id."-".$NotRel_url;
+                                        $NotRel_UrlImg=$web."imagenes/upload/".$NotRel_imagen_carpeta."thumb/".$NotRel_imagen;
+                                ?>
                                     
                                 <!-- start:article -->
                                 <article class="col-md-4 cat-sports">
                                    
                                     <div class="thumb-wrap relative">
-                                        <a href="#"><img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive"></a>
-                                        <a href="#" class="theme">
-                                            Sport
+                                        <a href="<?php echo $NotRel_UrlWeb; ?>">
+                                            <img src="<?php echo $NotRel_UrlImg; ?>" width="265" height="160" alt="Responsive image" class="img-responsive">
                                         </a>
                                     </div>
-                                    <span class="published">February 18, 2014</span>
-                                    <h3><a href="#">A wonderful serenity has taken possession of my entire soul</a></h3>
+                                    <span class="published"><?php echo $FechaMes." ".$FechaDia.", ".$FechaAnio; ?></span>
+                                    <h3><a href="<?php echo $NotRel_UrlWeb; ?>"><?php echo $NotRel_titulo; ?></a></h3>
                                     
                                 </article>
                                 <!-- end:article -->
-                                
-                                <!-- start:article -->
-                                <article class="col-md-4 cat-sports">
-                                   
-                                    <div class="thumb-wrap relative">
-                                        <a href="#"><img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive"></a>
-                                        <a href="#" class="theme">
-                                            Sport
-                                        </a>
-                                    </div>
-                                    <span class="published">February 18, 2014</span>
-                                    <h3><a href="#">Rebekah Brooks takes stand, denies phone hacking</a></h3>
-                                    
-                                </article>
-                                <!-- end:article -->
-                                
-                                <!-- start:article -->
-                                <article class="col-md-4 cat-sports">
-                                   
-                                    <div class="thumb-wrap relative">
-                                        <a href="#"><img src="images/dummy/265x160.jpg" width="265" height="160" alt="Responsive image" class="img-responsive"></a>
-                                        <a href="#" class="theme">
-                                            Sport
-                                        </a>
-                                    </div>
-                                    <span class="published">February 18, 2014</span>
-                                    <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                    
-                                </article>
-                                <!-- end:article -->
+                                <?php } ?>
                             
                             </div>
                             <!-- end:row -->
