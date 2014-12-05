@@ -1,3 +1,22 @@
+<?php
+//NOTICIA SUPERIOR DESTACADA
+$rst_SupDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
+$fila_SupDest=mysql_fetch_array($rst_SupDest);
+
+//VARIABLES
+$SupDest_id=$fila_SupDest["id"];
+$SupDest_url=$fila_SupDest["url"];
+$SupDest_titulo=$fila_SupDest["titulo"];
+$SupDest_contenido=primerParrafo($fila_SupDest["contenido"]);
+$SupDest_imagen=$fila_SupDest["imagen"];
+$SupDest_imagen_carpeta=$fila_SupDest["imagen_carpeta"];
+
+$SupDest_UrlWeb=$web."noticia/".$SupDest_id."-".$SupDest_url;
+$SupDest_UrlImg=$web."imagenes/upload/".$SupDest_imagen_carpeta."thumbhdest/".$SupDest_imagen;
+
+//NOTICIA SUPERIOR NORMAL
+$rst_SupNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=0 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 3", $conexion);
+?>
 <!-- start:page slider -->
 <div id="page-slider" class="clearfix">
     
@@ -14,15 +33,12 @@
                 <div class="col-sm-8">
                     
                     <article class="linkbox large cat-sports">
-                        <a href="noticia.php">
-                            <img src="/imagenes/upload/1.jpg" width="819" height="452" alt="Responsive image" class="img-responsive" />
+                        <a href="<?php echo $SupDest_UrlWeb; ?>">
+                            <img src="<?php echo $SupDest_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
                             <div class="overlay">
-                                <h2>Catherine Houles: No todo va a ser de color de rosa</h2>
-                                <p>Entre los 138 coches inscritos para tomar la salida del Dakar figura uno 100% femenino, el de Catherine Houlès y Sandrine Ridet. Estas incondicionales del Rally de las Gacelas tienen previsto dar que hablar en la tierra de los Pumas...</p>
+                                <h2><?php echo $SupDest_titulo; ?></h2>
+                                <?php echo $SupDest_contenido; ?>
                             </div>
-                        </a>
-                        <a href="#" class="theme">
-                            Categoría
                         </a>
                     </article>
 
@@ -31,42 +47,30 @@
                 
                 <!-- start:col -->
                 <div class="col-sm-4">
+
+                    <?php while($fila_SupNor=mysql_fetch_array($rst_SupNor)){
+                            //VARIABLES
+                            $SupNor_id=$fila_SupNor["id"];
+                            $SupNor_url=$fila_SupNor["url"];
+                            $SupNor_titulo=$fila_SupNor["titulo"];
+                            $SupNor_contenido=primerParrafo($fila_SupNor["contenido"]);
+                            $SupNor_imagen=$fila_SupNor["imagen"];
+                            $SupNor_imagen_carpeta=$fila_SupNor["imagen_carpeta"];
+
+                            $SupNor_UrlWeb=$web."noticia/".$SupNor_id."-".$SupNor_url;
+                            $SupNor_UrlImg=$web."imagenes/upload/".$SupNor_imagen_carpeta."thumbhdestri/".$SupNor_imagen;
+                    ?>
                     
                     <article class="linkbox cat-sports">
-                        <a href="#">
-                            <img src="/imagenes/upload/2.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
+                        <a href="<?php echo $SupNor_UrlWeb; ?>">
+                            <img src="<?php echo $SupNor_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
                             <div class="overlay">
-                                <h3>Bosch pionero del 100% eléctrico</h3>
+                                <h3><?php echo $SupNor_titulo; ?></h3>
                             </div>
                         </a>
-                        <a href="#" class="theme">
-                            Categoría
-                        </a>
                     </article>
-                    
-                    <article class="linkbox cat-sports">
-                        <a href="#">
-                            <img src="/imagenes/upload/3.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
-                            <div class="overlay">
-                                <h3>Primera salida</h3>
-                            </div>
-                        </a>
-                        <a href="#" class="theme">
-                            Categoría
-                        </a>
-                    </article>
-                    
-                    <article class="linkbox cat-sports">
-                        <a href="#">
-                            <img src="/imagenes/upload/4.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
-                            <div class="overlay">
-                                <h3>¡Rumbo a los 100 000 kilómetros!</h3>
-                            </div>
-                        </a>
-                        <a href="#" class="theme">
-                            Categoría
-                        </a>
-                    </article>
+
+                    <?php } ?>                    
 
                 </div>
                 <!-- end:col -->
