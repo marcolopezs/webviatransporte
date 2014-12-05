@@ -21,7 +21,7 @@ if($num_notgaleria>0){
 		$imagen_fechaPub=$fechaActual;
 		$imagen=$_POST['uploader_galeria_'.$cont.'_tmpname'];
 		$thumb{$cont}=PhpThumbFactory::create("../../../imagenes/galeria/".$imagen_carpeta."".$imagen."");
-		$thumb{$cont}->adaptiveResize(290,210);
+		$thumb{$cont}->adaptiveResize(300,200);
 		$thumb{$cont}->save("../../../imagenes/galeria/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 		mysql_query("INSERT INTO ".$tabla_suf."_galeria_slide(imagen, imagen_carpeta, orden, noticia, fecha_publicacion) 
 		VALUES ('$imagen', '$imagen_carpeta', $cont_img, $noticia, '$imagen_fechaPub')",$conexion);
@@ -33,7 +33,7 @@ if($num_notgaleria>0){
 		$imagen_fechaPub=$fechaActual;
 		$imagen=$_POST['uploader_galeria_'.$cont.'_tmpname'];
 		$thumb{$cont}=PhpThumbFactory::create("../../../imagenes/galeria/".$imagen_carpeta."".$imagen."");
-		$thumb{$cont}->adaptiveResize(290,210);
+		$thumb{$cont}->adaptiveResize(300,200);
 		$thumb{$cont}->save("../../../imagenes/galeria/".$imagen_carpeta."thumb/".$imagen."", "jpg");
 		$imagen=$_POST['uploader_galeria_'.$cont.'_tmpname'];
 		mysql_query("INSERT INTO ".$tabla_suf."_galeria_slide(imagen, imagen_carpeta, orden, noticia, fecha_publicacion) 
