@@ -155,12 +155,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="formRow">
-                        <div class="grid3"><label>Audio (Soundcloud):</label></div>
-                        <div class="grid9"><textarea name="audio"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="formRow">
                         <div class="grid3"><label>Categoria:</label></div>
                         <div class="grid9">
                             <select name="categoria" class="validate[required] styled">
@@ -182,6 +176,16 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                                 <input type="radio" name="tipo_noticia" value="not_destacada" /></div>
                             <div class="floatL mr10">Normal
                                 <input type="radio" name="tipo_noticia" value="not_normal" checked="checked" /></div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Posición: </label></div>
+                        <div class="grid9 yes_no">
+                            <div class="floatL mr10">Superior
+                                <input type="radio" name="tipo_posicion" value="not_superior" /></div>
+                            <div class="floatL mr10">Inferior
+                                <input type="radio" name="tipo_posicion" value="not_inferior" checked="checked" /></div>
                         </div>
                     </div>
 

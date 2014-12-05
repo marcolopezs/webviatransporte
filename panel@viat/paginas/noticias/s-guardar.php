@@ -10,6 +10,7 @@ $url=getUrlAmigable(eliminarTextoURL($nombre));
 $contenido=$_POST["contenido"];
 $categoria=$_POST["categoria"];
 $tipo_noticia=$_POST["tipo_noticia"];
+$tipo_posicion=$_POST["tipo_posicion"];
 
 //FECHA Y HORA
 $pub_fecha=$_POST["pub_fecha"];
@@ -19,8 +20,7 @@ $publicar=1;
 
 //TAGS
 $tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }
-elseif($tags<>""){ $union_tags=implode(",", $tags);}
+if($tags==""){ $union_tags=0; }elseif($tags<>""){ $union_tags=implode(",", $tags);}
 
 //SUBIR IMAGEN
 $upload_imagenTmp=$_POST["uploader_0_tmpname"];
@@ -59,28 +59,14 @@ if ($tipo_noticia=="not_destacada") {
 	}
 }
 
-//VIDEO YOUTUBE
-if($video_youtube<>""){
-	$mostrar_video=1;
-	$tipo_video="youtube";
-	$video=$video_youtube;
-	$video_carpeta="";
-}elseif($video_youtube==""){
-	$mostrar_video=0;
-	$tipo_video="";
-	$video="";
-	$video_carpeta="";
-}
+//POSICION
+if($tipo_posicion=="not_superior"){ $superior=1; }elseif($tipo_posicion=="not_inferior"){ $superior=0; }
 
-//AUDIO SOUNDCLOUD
-if($audio<>""){
-    $audio=$audio;
-}elseif($audio==""){
-    $audio="";
-}
+//VIDEO YOUTUBE
+if($video_youtube<>""){	$video=$video_youtube;}elseif($video_youtube==""){	$video=""; }
 
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_noticia (url, titulo, contenido, imagen, imagen_carpeta, fecha_publicacion, publicar, destacada, categoria, tags, video, tipo_video, mostrar_video, audio) VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$imagen', '$imagen_carpeta', '$fecha_publicacion', $publicar, $destacada, $categoria, '0,$union_tags,0', '$video', '$tipo_video', '$mostrar_video', '$audio');",$conexion);
+$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_noticia (url, titulo, contenido, imagen, imagen_carpeta, fecha_publicacion, publicar, destacada, superior, categoria, tags, video) VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$imagen', '$imagen_carpeta', '$fecha_publicacion', $publicar, $destacada, $superior, $categoria, '0,$union_tags,0', '$video');",$conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

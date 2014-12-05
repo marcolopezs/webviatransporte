@@ -11,6 +11,7 @@ $url=getUrlAmigable(eliminarTextoURL($nombre));
 $contenido=$_POST["contenido"];
 $categoria=$_POST["categoria"];
 $tipo_noticia=$_POST["tipo_noticia"];
+$tipo_posicion=$_POST["tipo_posicion"];
 $tags=$_POST["tags"];
 
 //FECHA Y HORA
@@ -20,17 +21,13 @@ $fecha_publicacion=$pub_fecha." ".$pub_hora;
 
 //TAGS
 $tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }
-elseif($tags<>""){ $union_tags=implode(",", $tags);}
+if($tags==""){ $union_tags=0; }elseif($tags<>""){ $union_tags=implode(",", $tags);}
 
 //PUBLICAR
 if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
 
 //VIDEO
 $video_youtube=$_POST["video_youtube"];
-
-//AUDIO
-$audio=$_POST["audio"];
 
 //IMAGEN
 if ($tipo_noticia=="not_destacada") {
@@ -66,24 +63,7 @@ if ($tipo_noticia=="not_destacada") {
 }
 
 //VIDEO YOUTUBE
-if($video_youtube<>""){
-	$mostrar_video=1;
-	$tipo_video="youtube";
-	$video=$video_youtube;
-	$video_carpeta="";
-}elseif($video_youtube==""){
-	$mostrar_video=0;
-	$tipo_video="";
-	$video="";
-	$video_carpeta="";
-}
-
-//AUDIO SOUNDCLOUD
-if($audio<>""){
-    $audio=$audio;
-}elseif($audio==""){
-    $audio="";
-}
+if($video_youtube<>""){ $video=$video_youtube; }elseif($video_youtube==""){ $video=""; }
 
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='".htmlspecialchars($nombre)."', 
@@ -93,12 +73,10 @@ $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_noticia SET url='$url', titulo='
 	fecha_publicacion='$fecha_publicacion', 
 	publicar=$publicar, 
 	destacada=$destacada, 
+	superior=$superior,
 	categoria=$categoria, 
 	tags='0,$union_tags,0', 
-	video='$video', 
-	tipo_video='$tipo_video', 
-	mostrar_video=$mostrar_video,
-	audio='$audio' WHERE id=$nota_id;", $conexion);
+	video='$video' WHERE id=$nota_id;", $conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

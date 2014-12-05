@@ -17,10 +17,9 @@ $nota_imagen=$fila_nota["imagen"];
 $nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
 $nota_contenido=$fila_nota["contenido"];
 $nota_video=$fila_nota["video"];
-$nota_audio=$fila_nota["audio"];
-$nota_video_tipo=$fila_nota["tipo_video"];
 $nota_categoria=$fila_nota["categoria"];
 $nota_destacada=$fila_nota["destacada"];
+$nota_superior=$fila_nota["superior"];
 $nota_publicar=$fila_nota["publicar"];
 
 /* FECHA */
@@ -156,12 +155,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="formRow">
-                        <div class="grid3"><label>Audio (Soundcloud):</label></div>
-                        <div class="grid9"><textarea name="audio"><?php echo $nota_audio; ?></textarea>
-                        </div>
-                    </div>
-
-                    <div class="formRow">
                         <div class="grid3"><label>Categoria:</label></div>
                         <div class="grid9">
                             <select name="categoria" class="styled">
@@ -195,6 +188,26 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                                 <input type="radio" name="tipo_noticia" value="not_normal" checked />
                                 <?php }else{ ?>
                                 <input type="radio" name="tipo_noticia" value="not_normal" />
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Posición: </label></div>
+                        <div class="grid9 yes_no">
+                            <div class="floatL mr10">Superior
+                                <?php if($nota_superior==1){ ?>
+                                <input type="radio" name="tipo_posicion" value="not_superior" checked />
+                                <?php }else{ ?>
+                                <input type="radio" name="tipo_posicion" value="not_superior" />
+                                <?php } ?>
+                            </div>
+                            <div class="floatL mr10">Inferior
+                                <?php if($nota_superior<>1){ ?>
+                                <input type="radio" name="tipo_posicion" value="not_inferior" checked />
+                                <?php }else{ ?>
+                                <input type="radio" name="tipo_posicion" value="not_inferior" />
                                 <?php } ?>
                             </div>
                         </div>
