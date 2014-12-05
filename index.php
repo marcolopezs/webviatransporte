@@ -3,7 +3,7 @@ require_once('panel@viat/conexion/conexion.php');
 require_once('panel@viat/conexion/funciones.php');
 
 //NOTICIA INFERIOR DESTACADA
-$rst_InfDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
+$rst_InfDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=1 AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
 $fila_InfDest=mysql_fetch_array($rst_InfDest);
 
 //VARIABLES
@@ -18,7 +18,7 @@ $InfDest_UrlWeb=$web."noticia/".$InfDest_id."-".$InfDest_url;
 $InfDest_UrlImg=$web."imagenes/upload/".$InfDest_imagen_carpeta."thumbhdest/".$InfDest_imagen;
 
 //NOTICIA INFERIOR NORMAL
-$rst_InfNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=0 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 6", $conexion);
+$rst_InfNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=0 AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 6", $conexion);
 
 ?>
 <!DOCTYPE html >
