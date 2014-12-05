@@ -367,9 +367,6 @@ RewriteRule ^edicion-anterior-(.*)$           /edicion-anterior.php?url=$1
 #NOTICIA DE PORTADA
 RewriteRule ^noticiaed/([0-9]*)-(.*)$        /noticia-portada.php?id=$1&url=$2
 
-#OTROS
-RewriteRule ^(.*)/$                          /paginas.php?url=$1
-
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
 # ----------------------------------------------------------------------
