@@ -1,6 +1,6 @@
 <?php
 //NOTICIA SUPERIOR DESTACADA
-$rst_SupDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
+$rst_SupDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=1 AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
 $fila_SupDest=mysql_fetch_array($rst_SupDest);
 
 //VARIABLES
@@ -15,7 +15,7 @@ $SupDest_UrlWeb=$web."noticia/".$SupDest_id."-".$SupDest_url;
 $SupDest_UrlImg=$web."imagenes/upload/".$SupDest_imagen_carpeta."thumbhdest/".$SupDest_imagen;
 
 //NOTICIA SUPERIOR NORMAL
-$rst_SupNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=0 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 3", $conexion);
+$rst_SupNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=1 AND destacada=0 AND publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 3", $conexion);
 ?>
 <!-- start:page slider -->
 <div id="page-slider" class="clearfix">
