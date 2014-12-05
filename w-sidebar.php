@@ -1,3 +1,6 @@
+<?php
+$rst_SidNot=mysql_query("SELECT * FROM vtr_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY contador DESC LIMIT 4", $conexion);
+?>
 <!-- start:sidebar -->
 <div id="sidebar">
     
@@ -25,44 +28,42 @@
         
         <!-- start:article-container -->
         <div class="article-container">
+            
+            <?php while($fila_SidNot=mysql_fetch_array($rst_SidNot)){
+                    //VARIABLES
+                    $SidNot_id=$fila_SidNot["id"];
+                    $SidNot_url=$fila_SidNot["url"];
+                    $SidNot_titulo=$fila_SidNot["titulo"];
+                    $SidNot_contenido=primerParrafo($fila_SidNot["contenido"]);
+                    $SidNot_imagen=$fila_SidNot["imagen"];
+                    $SidNot_imagen_carpeta=$fila_SidNot["imagen_carpeta"];
+                    $SidNot_fechaPub=$fila_SidNot["fecha_publicacion"];
+
+                    //SEPARACION DE FECHA
+                    $fechaPubSep=explode(" ", $SidNot_fechaPub);
+                    $fechaSep=explode("-", $fechaPubSep[0]);
+                    $FechaDia=$fechaSep[2];
+                    $FechaMes=mesCorto($fechaSep[1]);
+                    $FechaAnio=$fechaSep[0];
+
+                    $SidNot_UrlWeb=$web."noticia/".$SidNot_id."-".$SidNot_url;
+                    $SidNot_UrlImg=$web."imagenes/upload/".$SidNot_imagen_carpeta."thumbhmini/".$SidNot_imagen;
+            ?>
             <!-- start:article -->
             <article class="clearfix">
-                <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-sports"><a href="#">Categoría</a></span></span>
-                <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
+                <a href="<?php echo $SidNot_UrlWeb; ?>">
+                    <img src="<?php echo $SidNot_UrlImg; ?>" alt="<?php echo $SidNot_titulo; ?>" />
+                </a>
+                <span class="published"><?php echo $FechaMes." ".$FechaDia.", ".$FechaAnio; ?></span>
+                <h3><a href="<?php echo $SidNot_UrlWeb; ?>"><?php echo $SidNot_titulo; ?></a></h3>
             </article>
             <!-- end:article -->
-            <!-- start:article -->
-            <article class="clearfix">
-                <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-news"><a href="#">Categoría</a></span></span>
-                <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
-            </article>
-            <!-- end:article -->
-            <!-- start:article -->
-            <article class="clearfix">
-                <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-lifestyle"><a href="#">Categoría</a></span></span>
-                <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
-            </article>
-            <!-- end:article -->
-            <!-- start:article -->
-            <article class="clearfix">
-                <a href="#"><img src="images/dummy/100x80_2.jpg" width="100" height="80" alt="" /></a>
-                <span class="published">Feb 18, 2014 <span class="category cat-showtime"><a href="#">Categoría</a></span></span>
-                <h3><a href="#">A wonderful serenity has taken possession of my entire soul has taken possession</a></h3>
-            </article>
-            <!-- end:article -->
+            <?php } ?>
+
         </div>
         <!-- end:article-container -->
     </section>
     <!-- end:section-module-news -->
-    
-    <!-- start:advertising -->
-    <div class="ad ad-separator">
-        <a href=""><img src="images/dummy/banner_300x250.png" width="300" height="250" alt=""></a>
-    </div>
-    <!-- end:advertising -->
     
     <!-- start:section-module-photos -->
     <section class="module-photos">
