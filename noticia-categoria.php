@@ -28,9 +28,9 @@ if($num_categoria>0){
     $rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM vtr_noticia WHERE categoria=$Req_Id AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC;", $conexion);
     $row            = mysql_fetch_assoc($rst_noticias);
     $generated      = intval($row['count']);
-    $pagination     = new Pagination("10", $generated, $page, $Req_UrlWeb."&page", 1, 0);
+    $pagination     = new Pagination("7", $generated, $page, $Req_UrlWeb."&page", 1, 0);
     $start          = $pagination->prePagination();
-    $rst_noticias   = mysql_query("SELECT * FROM vtr_noticia WHERE categoria=$Req_Id AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 10", $conexion);
+    $rst_noticias   = mysql_query("SELECT * FROM vtr_noticia WHERE categoria=$Req_Id AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
 }else{
     header("Location:/404");
 }
