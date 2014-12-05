@@ -352,7 +352,7 @@ RewriteRule ^columnista/([0-9]*)-(.*)$        /columna-columnista.php?id=$1&url=
 
 #GALERIA DE FOTOS
 RewriteRule ^galeria/([0-9]*)-(.*)$           /galeria-fotos.php?id=$1&url=$2
-RewriteRule ^galerias$                        /galeria-fotos-lista.php
+RewriteRule ^galerias$                        /galeria.php
 
 #VIDEO
 RewriteRule ^video/([0-9]*)-(.*)$             /galeria-video.php?id=$1&url=$2
