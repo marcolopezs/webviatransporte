@@ -1,5 +1,25 @@
 <?php
 require_once('panel@viat/conexion/conexion.php');
+require_once('panel@viat/conexion/funciones.php');
+
+//NOTICIA INFERIOR DESTACADA
+$rst_InfDest=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=1 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
+$fila_InfDest=mysql_fetch_array($rst_InfDest);
+
+//VARIABLES
+$InfDest_id=$fila_InfDest["id"];
+$InfDest_url=$fila_InfDest["url"];
+$InfDest_titulo=$fila_InfDest["titulo"];
+$InfDest_contenido=primerParrafo($fila_InfDest["contenido"]);
+$InfDest_imagen=$fila_InfDest["imagen"];
+$InfDest_imagen_carpeta=$fila_InfDest["imagen_carpeta"];
+
+$InfDest_UrlWeb=$web."noticia/".$InfDest_id."-".$InfDest_url;
+$InfDest_UrlImg=$web."imagenes/upload/".$InfDest_imagen_carpeta."thumbhdest/".$InfDest_imagen;
+
+//NOTICIA INFERIOR NORMAL
+$rst_InfNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacada=0 AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 6", $conexion);
+
 ?>
 <!DOCTYPE html >
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="es"> <![endif]-->
@@ -50,246 +70,51 @@ require_once('panel@viat/conexion/conexion.php');
                             <!-- start:col -->
                             <div class="col-md-12">
                                 
-                                <article class="linkbox large cat-news">
-                                    <a href="#">
-                                        <img src="/imagenes/upload/5.jpg" width="560" height="390" alt="Responsive image" class="img-responsive" />
+                                <article class="linkbox large cat-sports">
+                                    <a href="<?php echo $InfDest_UrlWeb; ?>">
+                                        <img src="<?php echo $InfDest_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
                                         <div class="overlay">
-                                            <h2>Dakar 2015: Principio y fin en Buenos Aires</h2>
+                                            <h3><?php echo $InfDest_titulo; ?></h3>
                                         </div>
-                                    </a>
-                                    <a href="#" class="theme">
-                                        Categoría
                                     </a>
                                 </article>
                                 
                                 <!-- start:row -->
                                 <div class="row">
+
+                                    <?php while($fila_InfNor=mysql_fetch_array($rst_InfNor)){
+                                            //VARIABLES
+                                            $InfNor_id=$fila_InfNor["id"];
+                                            $InfNor_url=$fila_InfNor["url"];
+                                            $InfNor_titulo=$fila_InfNor["titulo"];
+                                            $InfNor_contenido=primerParrafo($fila_InfNor["contenido"]);
+                                            $InfNor_imagen=$fila_InfNor["imagen"];
+                                            $InfNor_imagen_carpeta=$fila_InfNor["imagen_carpeta"];
+
+                                            $InfNor_UrlWeb=$web."noticia/".$InfNor_id."-".$InfNor_url;
+                                            $InfNor_UrlImg=$web."imagenes/upload/".$InfNor_imagen_carpeta."thumbhinf/".$InfNor_imagen;
+                                    ?>
                                     
                                     <!-- start:col -->
                                     <div class="col-sm-6">
                                         <!-- start:article.linkbox -->
                                         <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/6.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
+                                            <a href="<?php echo $InfNor_UrlWeb; ?>">
+                                                <img src="<?php echo $InfNor_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
                                                 <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
+                                                    <h3><?php echo $InfNor_titulo; ?></h3>
                                                 </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
                                             </a>
                                         </article>
                                         <!-- end:article.linkbox -->
                                     </div>
                                     <!-- end:col -->
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">                                    
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/7.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
-                                            </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->                              
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                                
-                                <!-- start:row -->
-                                <div class="row">
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/8.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
-                                            </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->
-                                    </div>
-                                    <!-- end:col -->
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">                                    
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/9.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
-                                            </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->                              
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                                
-                                <!-- start:row -->
-                                <div class="row">
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/10.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
-                                            </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->
-                                    </div>
-                                    <!-- end:col -->
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">                                    
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
-                                            <a href="#">
-                                                <img src="/imagenes/upload/11.jpg" width="265" height="160" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3>Lorem ipsum dolor sit amet</h3>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="theme">
-                                                Categoría
-                                            </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->                              
-                                    </div>
-                                    <!-- end:col -->
-                                </div>
-                                <!-- end:row -->
-                                
 
-                                <!-- start:row -->
-                                <div class="row top-margin">
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">
-                                        
-                                        <!-- start:showtime -->
-                                        <section class="section-lifestyle news-layout">
-                                            
-                                            <header>
-                                                <h2><a href="#">Categoría</a></h2>
-                                                <span class="borderline"></span>
-                                            </header>
-                                        
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                        </section>
-                                        <!-- end:showtime -->
-                                            
-                                    </div>
-                                    <!-- end:col -->
-                                    <!-- start:col -->
-                                    <div class="col-sm-6">                                    
-                                        
-                                        <!-- start:showtime -->
-                                        <section class="section-tech news-layout">
-                                            
-                                            <header>
-                                                <h2><a href="#">Categoría</a></h2>
-                                                <span class="borderline"></span>
-                                            </header>
-                                        
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                            <!-- start:article -->
-                                            <article class="clearfix">
-                                                <h3><a href="#">Maecenas in egestas ligula, eu feugiat</a></h3>
-                                                <a href="#"><img src="images/dummy/100x80.jpg" width="100" height="80" alt="" /></a>
-                                                <span class="text">Sed tempor, odio non volutpat pulvinar, est libero congue lorem...</span>                                                                                    
-                                                <span class="published">February 18, 2014</span>
-                                            </article>
-                                            <!-- end:article -->
-                                            
-                                        </section>
-                                        <!-- end:showtime -->
-                                        
-                                    </div>
-                                    <!-- end:col -->
+                                    <?php } ?>
+
+
                                 </div>
-                                <!-- end:row --> 
-                                
+                                <!-- end:row -->
                                 
                             </div>
                             <!-- end:col -->
