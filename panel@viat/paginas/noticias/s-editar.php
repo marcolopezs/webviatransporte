@@ -62,6 +62,9 @@ if ($tipo_noticia=="not_destacada") {
 	}
 }
 
+//POSICION
+if($tipo_posicion=="not_superior"){ $superior=1; }elseif($tipo_posicion=="not_inferior"){ $superior=0; }
+
 //VIDEO YOUTUBE
 if($video_youtube<>""){ $video=$video_youtube; }elseif($video_youtube==""){ $video=""; }
 
