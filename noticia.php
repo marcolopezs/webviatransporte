@@ -141,7 +141,7 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                         <!-- end:article-post -->
                         
                                                 <!-- start:related-posts -->
-                        <section class="news-lay-3 bottom-margin">
+                        <section class="news-lay-3">
                                             
                             <header>
                                 <h2><a href="#">Noticias relacionadas</a></h2>
