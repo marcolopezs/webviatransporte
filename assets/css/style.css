@@ -1,91 +1,4 @@
 /* ==========================================================================
-   Table of Content
-   ========================================================================== 
-
-    Global
-        Body
-        Links
-        
-    General
-        Wrappers and containers
-        Article elements
-        Separators
-        Ratings
-        Buttons and forms
-        Colors
-        Media Queries
-        Margins and paddings
-        
-    Header mobile
-        Branding
-        Navigation
-        
-    Header desktop
-        Branding
-        Search
-        Weather
-        Navigation
-            Subnav - full size menu
-            Dropnav - regular drop down menu
-            Sub navigation - categories
-            
-        Media Queries
-    
-    Slider
-        Slider
-        Media Queries
-        
-    Content
-        Articles
-            Media Queries
-        News Layouts
-            news-lay-1
-            news-lay-2
-            news-lay-3
-            Media Queries
-            
-        Reviews
-        Videos
-            Media Queries
-            
-        Article page
-            Blockquote
-            Info box
-            Author box
-            Highlights        
-            Reviews
-            Footer
-            Comments
-            Iframes
-            Media Queries
-            
-        Archive page
-            Timeline
-            
-        Author page
-    
-    Sidebar
-        Timeline module
-        Quote module
-        Singles module
-        News module
-        Photos module
-        Media Queries
-        
-    Footer
-        Navigation
-        About
-        Copyright
-        Media Queries
-        
-    Banners
-        Banners
-        Media Queries
-        
-        
-        
-        
-/* ==========================================================================
    Global
    ========================================================================== */
 
@@ -481,7 +394,9 @@ ul.rating li.li-rated {
 }
 
 #page-content .bottom-margin {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c9c9c9;
+    padding-bottom: 15px;
 }
 
 .top-padding {
