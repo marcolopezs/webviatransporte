@@ -120,10 +120,10 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                             </header>
                             
                             <p class="lead">
-                                
+                                <?php echo soloDescripcion(cortarTextoRH($Noticia_contenido,1,0,150)); ?>
                             </p>
 
-                            <?php echo $Noticia_contenido; ?>
+                            <?php echo cortarTextoRH($Noticia_contenido,0,1,0); ?>
                             
                             <!-- start:article footer -->
                             <footer>
