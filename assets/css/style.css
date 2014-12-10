@@ -1555,7 +1555,7 @@ article.review img {
 #article-post footer {
     border-top: 1px solid #dadada;
     padding: 15px 0 0 0;
-    margin: 50px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 #article-post footer h3 {
@@ -2497,4 +2497,19 @@ a:hover .zoomix {
     color: #fff !important;
     margin: 0 6px;
     font-size: 20px;
+}
+
+/* OTROS */
+.tags-link span{
+    font-weight: bold;
+}
+
+.tags-link a{
+    background: #dadada;
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.uppercase{
+    text-transform: uppercase;
 }
