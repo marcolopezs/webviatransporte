@@ -345,11 +345,6 @@ RewriteRule ^buscar$                          /noticia-buscar.php
 RewriteRule ^categoria/([0-9]*)/(.*)$         /noticia-categoria.php?id=$1&url=$2
 RewriteRule ^tags/([0-9]*)/(.*)$              /noticia-tags.php?id=$1&url=$2
 
-#COLUMNISTA
-RewriteRule ^editorial/([0-9]*)-(.*)$         /columna-editorial.php?id=$1&url=$2
-RewriteRule ^la-palabra/([0-9]*)-(.*)$        /columna-palabra.php?id=$1&url=$2
-RewriteRule ^columnista/([0-9]*)-(.*)$        /columna-columnista.php?id=$1&url=$2
-
 #GALERIA DE FOTOS
 RewriteRule ^galeria/([0-9]*)-(.*)$           /galeria-fotos.php?id=$1&url=$2
 RewriteRule ^galerias$                        /galeria.php
@@ -359,13 +354,7 @@ RewriteRule ^video/([0-9]*)-(.*)$             /galeria-video.php?id=$1&url=$2
 RewriteRule ^videos$                          /galeria-video-lista.php
 
 #ADMINISTRADOR
-RewriteRule ^panel@impacto/$                  /panel@impacto/login.php
-
-#EDICION ANTERIOS
-RewriteRule ^edicion-anterior-(.*)$           /edicion-anterior.php?url=$1
-
-#NOTICIA DE PORTADA
-RewriteRule ^noticiaed/([0-9]*)-(.*)$        /noticia-portada.php?id=$1&url=$2
+RewriteRule ^panel@viat/$                     /panel@viat/login.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
