@@ -9,14 +9,14 @@
 <!-- end:web fonts -->
 
 <!-- start:stylesheets -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/weather-icons.min.css">
-<link rel="stylesheet" href="assets/css/jquery.sidr.dark.css">
-<link rel="stylesheet" href="assets/css/photobox.css">
-<link rel="stylesheet" href="assets/css/datepicker.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/colors.css">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/weather-icons.min.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/jquery.sidr.dark.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/photobox.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/datepicker.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/style.css?update=<?php echo date("YmdHi") ?>">
+<link rel="stylesheet" href="assets/css/colors.css?update=<?php echo date("YmdHi") ?>">
 
 <!-- end:stylesheets -->
 
