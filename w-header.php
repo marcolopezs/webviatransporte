@@ -63,8 +63,8 @@
                 <!-- start:col -->
                 <div class="col-sm-6 col-md-4 text-center">
                     
-                    <form id="search-form">
-                        <input type="text" name="qsearch" placeholder="Buscar" />
+                    <form id="search-form" method="GET" action="buscar" >
+                        <input type="text" name="buscar" placeholder="Buscar" />
                         <button><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                     
