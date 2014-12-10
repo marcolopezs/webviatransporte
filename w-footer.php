@@ -11,7 +11,6 @@
                 <li class="cat-sports"><a href="#">Rutas</a></li>
                 <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
                 <li class="cat-showtime"><a href="#">Contactenos</a></li>
-                <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
         </nav>
         
