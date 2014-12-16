@@ -7,7 +7,6 @@ $Req_Id=$_REQUEST["id"];
 $Req_Url=$_REQUEST["url"];
 
 //VARIABLES
-$header="interno";
 $Req_UrlWeb=$web."eventos";
 
 ################################################################
