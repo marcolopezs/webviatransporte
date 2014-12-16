@@ -345,6 +345,10 @@ RewriteRule ^buscar$                          /noticia-buscar.php
 RewriteRule ^categoria/([0-9]*)/(.*)$         /noticia-categoria.php?id=$1&url=$2
 RewriteRule ^tags/([0-9]*)/(.*)$              /noticia-tags.php?id=$1&url=$2
 
+#OTROS
+RewriteRule ^eventos$                         /eventos.php
+RewriteRule ^historia$                        /historia.php
+
 #GALERIA DE FOTOS
 RewriteRule ^galeria/([0-9]*)-(.*)$           /galeria-fotos.php?id=$1&url=$2
 RewriteRule ^galerias$                        /galeria.php
