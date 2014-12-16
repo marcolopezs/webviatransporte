@@ -39,7 +39,7 @@ $Noticia_UrlWeb=$web."noticia/".$Req_Id."-".$Req_Url;
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title><?php echo $Noticia_titulo; ?> | Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $Noticia_titulo; ?> | <?php echo $web_nombre; ?></title>
     <!-- end:page title -->
     
     <!-- start:meta info -->

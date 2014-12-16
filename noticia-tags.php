@@ -46,7 +46,7 @@ if($num_tags>0){
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title>Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $web_nombre; ?></title>
     <!-- end:page title -->
     
     <!-- start:meta info -->

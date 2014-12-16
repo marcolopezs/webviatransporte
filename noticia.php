@@ -79,7 +79,7 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title><?php echo $Noticia_titulo; ?> | Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $Noticia_titulo; ?> | <?php echo $web_nombre; ?></title>
     <!-- end:page title -->
     
     <!-- start:meta info -->
@@ -113,6 +113,9 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                             
                             <div class="head-image thumb-wrap relative">
                                 <img src="<?php echo $Noticia_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
+                                <a href="<?php echo $Noticia_UrlCat; ?>" class="theme">
+                                    <?php echo $NotCat_titulo; ?>
+                                </a>
                             </div>
                             
                             <header>

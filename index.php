@@ -33,7 +33,7 @@ $rst_InfNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacad
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title>Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $web_nombre; ?></title>
     <!-- end:page title -->
     
     <!-- start:meta info -->

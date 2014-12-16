@@ -48,7 +48,7 @@ if($num_categoria>0){
     <!-- end:global -->
 
     <!-- start:page title -->
-    <title>Vialidad y Transporte Latinoamericano</title>
+    <title><?php echo $Categoria_titulo; ?> | <?php echo $web_nombre; ?></title>
     <!-- end:page title -->
     
     <!-- start:meta info -->
@@ -83,7 +83,7 @@ if($num_categoria>0){
                             <!-- start:col -->
                             <div class="col-md-12">
                                 
-                                <h2>Noticias</h2>
+                                <h2><?php echo $Categoria_titulo; ?></h2>
 
                                 <?php while($fila_noticias=mysql_fetch_array($rst_noticias)){
                                     $noticia_id=$fila_noticias["id"];
