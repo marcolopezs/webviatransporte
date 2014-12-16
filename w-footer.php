@@ -6,11 +6,13 @@
     
         <nav id="foot-menu" class="hidden-xs">
             <ul class="clearfix">
-                <li class="home current"><a href="#">Inicio</a></li>
-                <li class="cat-news"><a href="#">Noticias</a></li>
-                <li class="cat-sports"><a href="#">Rutas</a></li>
-                <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
-                <li class="cat-showtime"><a href="#">Contactenos</a></li>
+                <li class="home curren"><a href="#">Inicio</a></li>
+                <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
+                <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
+                <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
+                <li class="cat-showtime"><a href="historia">Historia</a></li>
+                <li class="cat-tech"><a href="eventos">Eventos</a></li>
+                <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
         </nav>
         
@@ -25,7 +27,7 @@
             
             <!-- start:col -->
             <div class="col-sm-6 col-md-5">
-                <h4>Sobre Vialidad y Transporte Latinoamericano</h4>
+                <h4>Sobre <?php echo $web_nombre; ?></h4>
                 <p>Aliquam erat volutpat. Aliquam porta nibh id odio ornare ullamcorper. Etiam sit amet consectetur arcu. Suspendisse dolor nisl, eleifend quis metus a, sollicitudin semper orci.</p>
                 <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                 <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
@@ -60,7 +62,7 @@
         
             <!-- start:col -->
             <div class="col-sm-12">
-                &copy; <a href="#">Vialidad y Transporte Latinoamericano</a> 2014. Todos los derechos reservados.
+                &copy; <a href="#"><?php echo $web_nombre; ?></a> 2014. Todos los derechos reservados.
             </div>
             <!-- end:col -->
 

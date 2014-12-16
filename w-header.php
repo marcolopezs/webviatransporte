@@ -9,9 +9,10 @@
         <ul>
             <li class="cat-news"><a href="#">Inicio</a></li>
             <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
-            <li class="cat-lifestyle"><a href="#">Rutas</a></li>
-            <li class="cat-showtime"><a href="#">Nosotros</a></li>
-            <li class="cat-tech"><a href="#">Contactenos</a></li>
+            <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
+            <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
+            <li class="cat-showtime"><a href="historia">Historia</a></li>
+            <li class="cat-tech"><a href="eventos">Eventos</a></li>
         </ul>
         
     </div>
@@ -63,8 +64,8 @@
                 <!-- start:col -->
                 <div class="col-sm-6 col-md-4 text-center">
                     
-                    <form id="search-form" method="GET" action="buscar" >
-                        <input type="text" name="buscar" placeholder="Buscar" />
+                    <form id="search-form">
+                        <input type="text" name="qsearch" placeholder="Buscar" />
                         <button><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                     
@@ -89,11 +90,12 @@
             <!-- start:menu -->
             <nav id="menu">
                 <ul class="nav clearfix">
-                    <li class="home"><a href="/">Inicio</a></li>
-                    <li class="cat-news"><a href="categoria/1/noticias">Noticias</a></li>
-                    <li class="cat-sports"><a href="#">Rutas</a></li>
-                    <li class="cat-lifestyle"><a href="#">Nosotros</a></li>
-                    <li class="cat-showtime"><a href="#">Contactenos</a></li>
+                    <li class="cat-news"><a href="#">Inicio</a></li>
+                    <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
+                    <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
+                    <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
+                    <li class="cat-showtime"><a href="historia">Historia</a></li>
+                    <li class="cat-tech"><a href="eventos">Eventos</a></li>
                 </ul>
 
                 <!-- start:col -->
