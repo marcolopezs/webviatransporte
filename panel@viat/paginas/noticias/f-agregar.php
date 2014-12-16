@@ -140,7 +140,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     <div class="formRow">
                         <div class="grid3"><label>Imagen:</label> </div>
                         <div class="grid9">
-                            <a id="cambiar-imagen" href="javascript:;">Cambiar imagen</a>
                             <div id="cambiar-imagen-container" class="widget nomargin">
                                 <div id="uploader">Tu navegador no soporta HTML5.</div>
                             </div>
@@ -227,9 +226,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                     </div>
 
                     <div class="formRow">
-                        <div class="body" align="center">
-                            <input formtarget="_blank" type="submit" class="buttonL bBlue" name="btn-previa" value="Vista previa" onclick="this.form.action='/noticia-preview.php'; this.form.submit();">
-                        </div>
                         <div class="body" align="center">
                             <a href="lista.php" class="buttonL bBlack">Cancelar</a>
                             <input type="submit" class="buttonL bGreen" name="btn-guardar" value="Guardar datos" onclick="this.form.action='s-guardar.php'; this.form.submit();">
