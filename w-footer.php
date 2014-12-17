@@ -10,7 +10,7 @@
                 <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
                 <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
                 <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
-                <li class="cat-showtime"><a href="historia">Historia</a></li>
+                <li class="cat-showtime"><a href="historia/">Historia</a></li>
                 <li class="cat-tech"><a href="eventos">Eventos</a></li>
                 <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
