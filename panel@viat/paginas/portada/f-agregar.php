@@ -38,7 +38,7 @@ $pub_hora=date("H:i:s");
 <!-- Content begins -->
 <div id="content">
     <div class="contentTop">
-        <span class="pageTitle"><span class="icon-screen"></span>Edición Impresa</span>
+        <span class="pageTitle"><span class="icon-screen"></span>Revista</span>
     </div>
     
     <!-- Breadcrumbs line -->

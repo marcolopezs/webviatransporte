@@ -26,7 +26,7 @@ include_once('../../js/plugins/creative_table/creativeTable.php');
 $ct=new CreativeTable();
 
 // Data Gathering
-$params['sql_query']                = "SELECT id, titulo,  nombre_edicion FROM ".$tabla_suf."_edicion AS noti ORDER BY fecha_publicacion DESC, id DESC";
+$params['sql_query']                = "SELECT id, titulo, nombre_edicion FROM ".$tabla_suf."_edicion AS noti ORDER BY fecha_publicacion DESC, id DESC";
 //$params['search']                   = $search;
 $params['multiple_search']          = $multiple_search;
 $params['items_per_page']           = $items_per_page;
@@ -55,8 +55,6 @@ $arr_extra_cols[0]  = array(6,'Acciones','100','<div class="btn-group" style="di
                                         <span class="icos-trash"></span>Eliminar</a></li>
                                     <li><a href="f-editar.php?id=#COL1#" class="">
                                         <span class="icos-pencil"></span>Modificar</a></li>
-                                    <li><a href="../portada-noticias/lista.php?not=#COL1#" class="">
-                                        <span class="icos-list"></span>Noticias</a></li>
                                 </ul>
                             </div>');
 $params['extra_cols']   = $arr_extra_cols;
@@ -108,7 +106,7 @@ function eliminarRegistro(registro) {
 <!-- Content begins -->
 <div id="content">
     <div class="contentTop">
-        <span class="pageTitle"><span class="icon-screen"></span>Edición Impresa</span>
+        <span class="pageTitle"><span class="icon-screen"></span>Revista</span>
     </div>
     
     <!-- Breadcrumbs line -->
@@ -140,7 +138,7 @@ function eliminarRegistro(registro) {
 
         <!-- Media table sample -->
         <div class="widget">
-            <div class="whead"><h6>Edición Impresa</h6></div>
+            <div class="whead"><h6>Revista</h6></div>
             
             <?php echo $out;?>
 
