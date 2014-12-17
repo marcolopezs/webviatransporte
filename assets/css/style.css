@@ -2516,3 +2516,7 @@ a:hover .zoomix {
 .addthis_native_toolbox{
     margin: 10px 0;
 }
+
+article.paginas img{
+    width: 100% !important;
+}
