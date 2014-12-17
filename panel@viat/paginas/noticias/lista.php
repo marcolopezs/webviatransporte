@@ -55,8 +55,6 @@ $arr_extra_cols[0]  = array(6,'Acciones','100','<div class="btn-group" style="di
                                         <span class="icos-trash"></span>Eliminar</a></li>
                                     <li><a href="f-editar.php?id=#COL1#" class="">
                                         <span class="icos-pencil"></span>Modificar</a></li>
-                                    <li><a href="../noticias-slider/lista.php?not=#COL1#" class="">
-                                        <span class="icos-photos"></span>Galería de Fotos</a></li>
                                 </ul>
                             </div>');
 $params['extra_cols']   = $arr_extra_cols;
