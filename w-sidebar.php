@@ -1,5 +1,18 @@
 <?php
+//LO MAS VISTO
 $rst_SidNot=mysql_query("SELECT * FROM vtr_noticia WHERE publicar=1 AND fecha_publicacion<='$fechaActual' ORDER BY contador DESC LIMIT 4", $conexion);
+
+//REVISTA
+$rst_revista=mysql_query("SELECT * FROM vtr_edicion WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$fila_revista=mysql_fetch_array($rst_revista);
+
+//VARIABLES
+$Revista_id=$fila_revista["id"];
+$Revista_url=$fila_revista["url"];
+$Revista_titulo=$fila_revista["titulo"];
+$Revista_imagen=$fila_revista["imagen"];
+
+$Revista_UrlImg=$we."imagenes/revista/".$fila_revista["imagen"];
 ?>
 <!-- start:sidebar -->
 <div id="sidebar">
@@ -11,8 +24,8 @@ $rst_SidNot=mysql_query("SELECT * FROM vtr_noticia WHERE publicar=1 AND fecha_pu
             <h2>Revista digital</h2>
         </header>
 
-        <a href="http://issuu.com/revistatransp/docs/revista_transporte___turismo_octubr" target="_blank">
-            <img src="imagenes/upload/portada.jpg" width="300" alt="">
+        <a href="<?php echo $Revista_url; ?>" target="_blank">
+            <img src="<?php echo $Revista_UrlImg; ?>" width="300" alt="<?php echo $Revista_titulo; ?>">
         </a>
     </div>
     <!-- end:advertising -->
