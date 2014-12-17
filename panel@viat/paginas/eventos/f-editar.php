@@ -16,10 +16,7 @@ $nota_nombre=$fila_nota["titulo"];
 $nota_imagen=$fila_nota["imagen"];
 $nota_imagen_carpeta=$fila_nota["imagen_carpeta"];
 $nota_contenido=$fila_nota["contenido"];
-$nota_video=$fila_nota["video"];
-$nota_categoria=$fila_nota["categoria"];
-$nota_destacada=$fila_nota["destacada"];
-$nota_superior=$fila_nota["superior"];
+$nota_fecha_evento=$fila_nota["fecha_evento"];
 $nota_publicar=$fila_nota["publicar"];
 
 /* FECHA */
@@ -83,6 +80,11 @@ $nota_pub_hora=$nota_fecha_pub[1];
                     <div class="widget">
                         <div class="whead"><h6>Contenido</h6></div>
                         <textarea class="ckeditor" name="contenido"><?php echo $nota_contenido; ?></textarea>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>Fecha Evento:</label></div>
+                        <div class="grid4"><input type="text" class="datepicker" name="fecha_evento" value="<?php echo $nota_fecha_evento; ?>" /></div>
                     </div>
 
                     <div class="formRow">

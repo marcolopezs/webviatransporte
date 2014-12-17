@@ -8,6 +8,7 @@ require_once('../../js/plugins/thumbs/ThumbLib.inc.php');
 $nombre=$_POST["nombre"];
 $url=getUrlAmigable(eliminarTextoURL($nombre));
 $contenido=$_POST["contenido"];
+$fecha_evento=$_POST["fecha_evento"];
 
 //FECHA Y HORA
 $pub_fecha=$_POST["pub_fecha"];
@@ -24,7 +25,7 @@ $imagen_carpeta = fechaCarpeta()."/";
 $imagen=guardarImagen($upload_imagenTmp, $imagen_carpeta, $upload_imagenName);
 
 //INSERTANDO DATOS
-$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_eventos (url, titulo, contenido, imagen, imagen_carpeta, fecha_publicacion, publicar) VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$imagen', '$imagen_carpeta', '$fecha_publicacion', $publicar);",$conexion);
+$rst_guardar=mysql_query("INSERT INTO ".$tabla_suf."_eventos (url, titulo, contenido, fecha_evento, imagen, imagen_carpeta, fecha_publicacion, publicar) VALUES('$url', '".htmlspecialchars($nombre)."', '$contenido', '$fecha_evento','$imagen', '$imagen_carpeta', '$fecha_publicacion', $publicar);",$conexion);
 
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();

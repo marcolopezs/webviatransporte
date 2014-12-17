@@ -9,6 +9,7 @@ $nota_id=$_REQUEST["id"];
 $nombre=$_POST["nombre"];
 $url=getUrlAmigable(eliminarTextoURL($nombre));
 $contenido=$_POST["contenido"];
+$fecha_evento=$_POST["fecha_evento"];
 
 //PUBLICAR
 if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }
@@ -33,6 +34,7 @@ if($upload_imagenTmp<>""){
 //INSERTANDO DATOS
 $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_eventos SET url='$url', titulo='".htmlspecialchars($nombre)."', 
 	contenido='$contenido', 
+	fecha_evento='$fecha_evento',
 	imagen='$imagen', 
 	imagen_carpeta='$imagen_carpeta', 
 	fecha_publicacion='$fecha_publicacion', 

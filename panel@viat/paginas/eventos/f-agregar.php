@@ -68,6 +68,11 @@ $pub_hora=date("H:i:s");
                     </div>
 
                     <div class="formRow">
+                        <div class="grid3"><label>Fecha de Evento:</label></div>
+                        <div class="grid4"><input type="text" class="datepicker" name="fecha_evento" value="<?php echo $pub_fecha; ?>" /></div>
+                    </div>
+
+                    <div class="formRow">
                         <div class="grid3"><label>Imagen:</label> </div>
                         <div class="grid9">
                             <div id="cambiar-imagen-container" class="widget nomargin">
