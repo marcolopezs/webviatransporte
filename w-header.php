@@ -54,7 +54,7 @@
             <div class="row">
             
                 <!-- start:col -->
-                <div class="col-sm-6 col-md-8">
+                <div class="col-sm-6 col-md-7">
                     <!-- start:logo -->
                     <h1><a href="/"><img src="images/logo-color.png" alt="Weekly News" /></a></h1>
                     <!-- end:logo -->
@@ -62,12 +62,21 @@
                 <!-- end:col -->
 
                 <!-- start:col -->
-                <div class="col-sm-6 col-md-4 text-center">
+                <div class="col-sm-6 col-md-5 text-center" style="margin-top: 25px;">
                     
-                    <form id="search-form" action="buscar" method="GET">
-                        <input type="text" name="buscar" placeholder="Buscar" />
-                        <button><span class="glyphicon glyphicon-search"></span></button>
-                    </form>
+                    <script>
+                      (function() {
+                        var cx = '018282985496243368695:lv6ajvdadks';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                      })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
                     
                 </div>
                 <!-- end:col -->

@@ -2,38 +2,7 @@
 require_once('panel@viat/conexion/conexion.php');
 require_once("panel@viat/conexion/funciones.php");
 
-################################################################
-//PAGINACION DE NOTICIAS
-require("libs/pagination/class_pagination.php");
-
-################################################################
-/*VARIABLES DE URL AL BUSCAR POR TEXTO*/
 $buscar=$_REQUEST["buscar"];
-
-if($buscar<>""){
-    $url_web=$web."buscar?buscar=$buscar";
-    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-    $rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM vtr_noticia WHERE titulo LIKE '%$buscar%' AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
-    $fila_noticias  = mysql_fetch_assoc($rst_noticias);
-    $generated      = intval($fila_noticias['count']);
-    $pagination     = new Pagination("7", $generated, $page, $url_web."&page", 1, 0);
-    $start          = $pagination->prePagination();
-    $rst_noticias        = mysql_query("SELECT * FROM vtr_noticia WHERE titulo LIKE '%$buscar%' AND fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
-}
-
-################################################################
-/*BUSCAR SI EL INPUT ESTA VACIO*/
-
-if($buscar==""){
-    $url_web=$web."buscar";
-    $page = (isset($_GET['page'])) ? intval($_GET['page']) : 1;
-    $rst_noticias   = mysql_query("SELECT COUNT(*) as count FROM vtr_noticia WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC", $conexion);
-    $fila_noticias  = mysql_fetch_assoc($rst_noticias);
-    $generated      = intval($fila_noticias['count']);
-    $pagination     = new Pagination("7", $generated, $page, $url_web."?page", 1, 0);
-    $start          = $pagination->prePagination();
-    $rst_noticias        = mysql_query("SELECT * FROM vtr_noticia WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT $start, 7", $conexion);
-}
 
 ?>
 <!DOCTYPE html >
@@ -83,65 +52,27 @@ if($buscar==""){
                             <!-- start:col -->
                             <div class="col-md-12">
                                 
-                                <h2>Buscar: <?php echo $buscar; ?></h2>
-
-                                <?php while($fila_noticias=mysql_fetch_array($rst_noticias)){
-                                    $noticia_id=$fila_noticias["id"];
-                                    $noticia_url=$fila_noticias["url"];
-                                    $noticia_titulo=stripslashes($fila_noticias["titulo"]);
-                                    $noticia_contenido=soloDescripcion($fila_noticias["contenido"]);
-                                    $noticia_imagen=$fila_noticias["imagen"];
-                                    $noticia_imagen_carpeta=$fila_noticias["imagen_carpeta"];
-                                    $noticia_fechaPub=$fila_noticias["fecha_publicacion"];
-
-                                    //SEPARACION DE FECHA
-                                    $fechaPubSep=explode(" ", $noticia_fechaPub);
-                                    $fechaSep=explode("-", $fechaPubSep[0]);
-                                    $FechaDia=$fechaSep[2];
-                                    $FechaMes=mesCorto($fechaSep[1]);
-                                    $FechaAnio=$fechaSep[0];
-
-                                    //URLS
-                                    $noticia_UrlWeb=$web."noticia/".$noticia_id."-".$noticia_url;
-                                    $noticia_UrlImg=$web."imagenes/upload/".$noticia_imagen_carpeta."thumb/".$noticia_imagen;
-                                ?>
+                                <h2>Buscar: <?php echo $buscar; ?></h2>                                
                                 
                                 <!-- start:row -->
                                 <div class="row bottom-margin">
                                     
-                                    <!-- start:article.thumb -->
-                                    <article class="thumb cat-sports">
-                                        <!-- start:col -->
-                                        <div class="col-sm-5">
-                                            <div class="thumb-wrap relative">
-                                                <a href="<?php echo $noticia_UrlWeb; ?>">
-                                                    <img src="<?php echo $noticia_UrlImg; ?>" width="265" height="150" alt="Responsive image" class="img-responsive" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- end:col -->
-                                        <!-- start:col -->
-                                        <div class="col-sm-7">
-                                            <h3><a href="<?php echo $noticia_UrlWeb; ?>"><?php echo $noticia_titulo; ?></a></h3>
-                                            <span class="published"><?php echo $noticia_fechaPub; ?></span>
-                                            <span class="text">
-                                                <?php echo $noticia_contenido; ?>
-                                            </span>
-                                        </div>
-                                        <!-- end:col -->
-                                    </article>
-                                    <!-- end:article.thumb -->          
+                                    <script>
+                                      (function() {
+                                        var cx = '018282985496243368695:lv6ajvdadks';
+                                        var gcse = document.createElement('script');
+                                        gcse.type = 'text/javascript';
+                                        gcse.async = true;
+                                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                            '//www.google.com/cse/cse.js?cx=' + cx;
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(gcse, s);
+                                      })();
+                                    </script>
+                                    <gcse:searchresults-only></gcse:searchresults-only>          
                                 
                                 </div>
                                 <!-- end:row -->
-
-                                <?php } ?>
-
-                                <!-- start:load-more -->
-                                <div class="text-center">
-                                    <?php $pagination->pagination(); ?>
-                                </div>
-                                <!-- end:load-more -->
                                 
                             </div>
                             <!-- end:col -->
