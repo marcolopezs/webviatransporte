@@ -12,7 +12,6 @@
                 <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
                 <li class="cat-showtime"><a href="historia/">Historia</a></li>
                 <li class="cat-tech"><a href="eventos">Eventos</a></li>
-                <li class="options"><a href="#" class="scrollToTop">Subir <span class="glyphicon glyphicon-chevron-up"></span></a></li>
             </ul>                            
         </nav>
         
@@ -35,22 +34,6 @@
                 <a href="#"><i class="fa fa-google-plus-square fa-lg"></i></a>
                 <a href="#"><i class="fa fa-vimeo-square fa-lg"></i></a>
                 <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
-            </div>
-            <!-- end:col -->
-            
-            <!-- start:col -->
-            <div class="col-sm-6 col-md-4">
-                <h4>Additional information</h4>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Legal agreement</a></li>
-                    <li><a href="#">Our staff</a></li>
-                    <li><a href="#">Privacy policy</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Become a member</a></li>
-                    <li><a href="#">Press Releases</a></li>
-                </ul>
             </div>
             <!-- end:col -->
 
