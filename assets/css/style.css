@@ -521,9 +521,9 @@ body.nav-expanded #page-header-mobile nav {
 #header-branding {
     position: relative;
     height: 100px;
-    background: #444;
-    border-top: 5px solid #3a3a3a;
-    border-bottom: 1px solid #4d4d4d;
+    background: #5E5E5E;
+    border-top: 5px solid #5E5E5E;
+    border-bottom: 1px solid #5E5E5E;
     overflow: hidden;
 }
 
@@ -2519,4 +2519,46 @@ a:hover .zoomix {
 
 article.paginas img{
     width: 100% !important;
+}
+
+/*==========================
+GOOGLE - BUSCADOR
+==========================*/
+
+.gsc-input-box{
+    height: 30px !important;
+}
+
+.gsc-input-box .gsst_a {
+    padding-top: 7px !important;
+}
+
+.gsc-search-button .gsc-search-button.gsc-search-button-v2{
+    height: 30px !important;
+    background-image: url(http://www.google.com/uds/css/v2/search_box_icon.png);
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: 9px;
+}
+
+.gsc-selected-option-container.gsc-inline-block{
+    width: 105px !important;
+    min-width: 105px !important;
+    max-width: 105px !important;
+}
+
+.gsc-selected-option-container.gsc-inline-block .gsc-selected-option{
+    width: 75px !important;
+    min-width: 75px !important;
+    max-width: 75px !important;
+}
+
+.gsc-selected-option-container.gsc-inline-block .gsc-option-menu{
+    top: 28px !important;
+}
+
+.gsc-tabsArea > .gsc-tabHeader {
+    height: 26px !important;
+    width: 80px !important;
+    line-height: 23px !important;
 }
