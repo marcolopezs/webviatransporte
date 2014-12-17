@@ -149,12 +149,9 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                             <footer>
                                 <h3>Comparte esta noticia</h3>
                                 
-                                <a href=""><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href=""><i class="fa fa-facebook-square fa-lg"></i></a>
-                                <a href=""><i class="fa fa-linkedin-square fa-lg"></i></a>
-                                <a href=""><i class="fa fa-google-plus-square fa-lg"></i></a>
-                                <a href=""><i class="fa fa-vimeo-square fa-lg"></i></a>
-                                <a href=""><i class="fa fa-youtube fa-lg"></i></a>
+                                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                                <div class="addthis_native_toolbox"></div>
+                                
                             </footer>
                             <!-- end:article footer -->                            
                         </article>
@@ -243,6 +240,13 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
     <!-- end:page outer wrap -->
     
     <?php require_once('w-footer-script.php') ?>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5491a855121580bc" async="async"></script>
+    ​<script type="text/javascript">
+        var addthis_config = addthis_config||{};
+        addthis_config.data_track_clickback = false;
+    </script>
     
 </body>
 </html>
