@@ -1659,7 +1659,6 @@ article.review img {
     display: block;
     width: 100%;
     border: none;
-    margin: 15px 0 20px 0;
 }
 
 
@@ -2512,4 +2511,8 @@ a:hover .zoomix {
 
 .uppercase{
     text-transform: uppercase;
+}
+
+.addthis_native_toolbox{
+    margin: 10px 0;
 }
