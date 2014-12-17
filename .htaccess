@@ -339,6 +339,9 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
+#ADMINISTRADOR
+RewriteRule ^panel@viat/$                     /panel@viat/login.php
+
 #NOTICIAS
 RewriteRule ^noticia/([0-9]*)-(.*)$           /noticia.php?id=$1&url=$2
 RewriteRule ^buscar$                          /noticia-buscar.php
@@ -351,17 +354,6 @@ RewriteRule ^evento/([0-9]*)-(.*)$            /eventos-noticia.php?id=$1&url=$2
 
 #HISTORIA
 RewriteRule ^(.*)/$                           /paginas.php?url=$1
-
-#GALERIA DE FOTOS
-RewriteRule ^galeria/([0-9]*)-(.*)$           /galeria-fotos.php?id=$1&url=$2
-RewriteRule ^galerias$                        /galeria.php
-
-#VIDEO
-RewriteRule ^video/([0-9]*)-(.*)$             /galeria-video.php?id=$1&url=$2
-RewriteRule ^videos$                          /galeria-video-lista.php
-
-#ADMINISTRADOR
-RewriteRule ^panel@viat/$                     /panel@viat/login.php
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs
