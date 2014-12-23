@@ -13,6 +13,7 @@
             <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
             <li class="cat-showtime"><a href="historia/">Historia</a></li>
             <li class="cat-tech"><a href="eventos">Eventos</a></li>
+            <li class="cat-tech"><a href="entrevista">Entrevista</a></li>
         </ul>
         
     </div>
@@ -105,6 +106,7 @@
                     <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
                     <li class="cat-showtime"><a href="historia/">Historia</a></li>
                     <li class="cat-tech"><a href="eventos">Eventos</a></li>
+                    <li class="cat-tech"><a href="entrevista">Entrevista</a></li>
                 </ul>
 
                 <!-- start:col -->
