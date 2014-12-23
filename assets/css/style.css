@@ -521,9 +521,9 @@ body.nav-expanded #page-header-mobile nav {
 #header-branding {
     position: relative;
     height: 100px;
-    background: #5E5E5E;
-    border-top: 5px solid #5E5E5E;
-    border-bottom: 1px solid #5E5E5E;
+    background: #919191;
+    border-top: 5px solid #919191;
+    border-bottom: 1px solid #919191;
     overflow: hidden;
 }
 
