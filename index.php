@@ -97,16 +97,20 @@ $rst_InfNor=mysql_query("SELECT * FROM vtr_noticia WHERE superior=0 AND destacad
                                     
                                     <!-- start:col -->
                                     <div class="col-sm-6">
-                                        <!-- start:article.linkbox -->
-                                        <article class="linkbox cat-sports">
+                                        
+                                        <div class="ih-item square effect4">
                                             <a href="<?php echo $InfNor_UrlWeb; ?>">
-                                                <img src="<?php echo $InfNor_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
-                                                <div class="overlay">
-                                                    <h3><?php echo $InfNor_titulo; ?></h3>
+                                                <div class="img">
+                                                    <img src="<?php echo $InfNor_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
+                                                </div>
+                                                <div class="mask1"></div>
+                                                <div class="mask2"></div>
+                                                <div class="info">
+                                                  <h3><?php echo $InfNor_titulo; ?></h3>
                                                 </div>
                                             </a>
-                                        </article>
-                                        <!-- end:article.linkbox -->
+                                        </div>
+
                                     </div>
                                     <!-- end:col -->
 
