@@ -4,6 +4,7 @@ $rst_SidNot=mysql_query("SELECT * FROM vtr_noticia WHERE publicar=1 AND fecha_pu
 
 //REVISTA
 $rst_revista=mysql_query("SELECT * FROM vtr_edicion WHERE fecha_publicacion<='$fechaActual' ORDER BY fecha_publicacion DESC LIMIT 1;", $conexion);
+$num_revista=mysql_num_rows($rst_revista);
 $fila_revista=mysql_fetch_array($rst_revista);
 
 //VARIABLES
@@ -17,6 +18,7 @@ $Revista_UrlImg=$we."imagenes/revista/".$fila_revista["imagen"];
 <!-- start:sidebar -->
 <div id="sidebar">
     
+    <?php if($num_revista<>0){ ?>
     <!-- start:advertising -->
     <div class="ad">
 
@@ -29,6 +31,7 @@ $Revista_UrlImg=$we."imagenes/revista/".$fila_revista["imagen"];
         </a>
     </div>
     <!-- end:advertising -->
+    <?php } ?>
     
     <!-- start:section-module-news -->
     <section class="module-news top-margin">
