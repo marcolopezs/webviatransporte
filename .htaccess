@@ -352,6 +352,9 @@ RewriteRule ^tags/([0-9]*)/(.*)$              /noticia-tags.php?id=$1&url=$2
 RewriteRule ^eventos$                         /eventos-lista.php
 RewriteRule ^evento/([0-9]*)-(.*)$            /eventos-noticia.php?id=$1&url=$2
 
+#CONTACTENOS
+RewriteRule ^contactenos$                     /contacto.php
+
 #HISTORIA
 RewriteRule ^(.*)/$                           /paginas.php?url=$1
 
