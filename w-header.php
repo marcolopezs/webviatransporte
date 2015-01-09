@@ -13,7 +13,8 @@
             <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
             <li class="cat-showtime"><a href="historia/">Historia</a></li>
             <li class="cat-tech"><a href="eventos">Eventos</a></li>
-            <li class="cat-tech"><a href="entrevista">Entrevista</a></li>
+            <li class="cat-tech"><a href="categoria/4/entrevista">Entrevista</a></li>
+            <li class="cat-tech"><a href="contactenos">Contactenos</a></li>
         </ul>
         
     </div>
@@ -106,11 +107,12 @@
                     <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
                     <li class="cat-showtime"><a href="historia/">Historia</a></li>
                     <li class="cat-tech"><a href="eventos">Eventos</a></li>
-                    <li class="cat-tech"><a href="entrevista">Entrevista</a></li>
+                    <li class="cat-tech"><a href="categoria/4/entrevista">Entrevista</a></li>
+                    <li class="cat-tech"><a href="contactenos">Contactenos</a></li>
                 </ul>
 
                 <!-- start:col -->
-                <div class="header-sm col-sm-6 col-md-5">
+                <div class="header-sm col-sm-3 col-md-2">
                     <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
                     <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
                     <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
