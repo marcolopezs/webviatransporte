@@ -2563,3 +2563,31 @@ GOOGLE - BUSCADOR
     width: 80px !important;
     line-height: 23px !important;
 }
+
+/*==========================
+CONTACTENOS
+==========================*/
+
+body.contacto #page-content .bottom-margin {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+body.contacto label{
+    display: block !important;
+}
+
+body.contacto em{
+    color: #f00;
+}
+
+body.contacto .alert-error{
+    color:#990000;
+    background-color: #FBDBCF;
+}
+
+body.contacto .alert-success{
+    color:#336633; 
+    background-color: #d2f7ad;
+}
