@@ -113,9 +113,9 @@
 
                 <!-- start:col -->
                 <div class="header-sm col-sm-3 col-md-2">
-                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
-                    <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+                    <?php if($web_twitter<>""){ ?><a target="_blank" href="<?php echo $web_twitter; ?>"><i class="fa fa-twitter fa-lg"></i></a><?php } ?>
+                    <?php if($web_facebook<>""){ ?><a target="_blank" href="<?php echo $web_facebook; ?>"><i class="fa fa-facebook-square fa-lg"></i></a><?php } ?>
+                    <?php if($web_youtube<>""){ ?><a target="_blank" href="<?php echo $web_youtube ?>"><i class="fa fa-youtube fa-lg"></i></a><?php } ?>
                 </div>
                 <!-- end:col -->
 
