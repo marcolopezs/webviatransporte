@@ -20,8 +20,7 @@ $pub_hora=$_POST["pub_hora"];
 $fecha_publicacion=$pub_fecha." ".$pub_hora;
 
 //TAGS
-$tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }elseif($tags<>""){ $union_tags=implode(",", $tags);}
+$tags="";
 
 //PUBLICAR
 if ($_POST["publicar"]<>""){ $publicar=$_POST["publicar"]; }else{ $publicar=0; }

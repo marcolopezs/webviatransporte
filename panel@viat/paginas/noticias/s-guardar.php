@@ -19,8 +19,7 @@ $fecha_publicacion=$pub_fecha." ".$pub_hora;
 $publicar=1;
 
 //TAGS
-$tags=$_POST["tags"];
-if($tags==""){ $union_tags=0; }elseif($tags<>""){ $union_tags=implode(",", $tags);}
+$tags="";
 
 //SUBIR IMAGEN
 $upload_imagenTmp=$_POST["uploader_0_tmpname"];

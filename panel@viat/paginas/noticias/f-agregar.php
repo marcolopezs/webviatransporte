@@ -11,9 +11,6 @@ $pub_hora=date("H:i:s");
 //CATEGORIA
 $rst_cat=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_categoria WHERE publicar=1 ORDER BY categoria ASC;", $conexion);
 
-//ETIQUETAS
-$rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre ASC;", $conexion);
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,70 +20,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
 <title>Administrador</title>
 
 <?php require_once("../../w-scripts.php"); ?>
-
-    <!-- AGREGANDO NUEVO TAG -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.min.js"></script>
-    <script type="text/javascript" src="/js/modernizr.custom.js"></script>
-    <script type="text/javascript">
-        var jMulSl = jQuery.noConflict();
-
-        jMulSl(document).on("ready", function(){
-
-            jMulSl("#refreshAdd").on("click", function() {
-
-                var $select = jMulSl("select.selectMultiple"),
-                    $input = jMulSl("#refreshInput"),
-                    value = jMulSl.trim($input.val());
-
-                jMulSl.ajax({
-                    type: "POST",
-                    url: "s-guardar-tag.php",
-                    data: {"input": $input.val()},
-                    success:function(response){
-                        if (!value) {
-                            $input.focus();
-                            return;
-                        }
-
-                        var data = jMulSl.parseJSON(response)
-
-                        var $opt = jMulSl("<option />", {
-                            value: data.id,
-                            text: data.titulo
-                        });
-
-                        $input.val("");
-                        $select.append($opt);
-                    }
-                });
-            });
-
-
-
-            jMulSl("#cambiar-imagen").on("click", function(){
-
-                jMulSl("#cambiar-imagen-container").html('<div id="uploader">Tu navegador no soporta HTML5.</div>');
-
-                Modernizr.load([{
-                    load: ['<?php if(isset($url_admin)){ echo $url_admin; }  ?>js/plugins/uploader/plupload.js','<?php if(isset($url_admin)){ echo $url_admin; }  ?>js/plugins/uploader/plupload.html4.js','<?php if(isset($url_admin)){ echo $url_admin; }  ?>js/plugins/uploader/plupload.html5.js','<?php if(isset($url_admin)){ echo $url_admin; }  ?>js/plugins/uploader/jquery.plupload.queue.js'],
-                    complete: function () {
-                        jMulSl("#uploader").pluploadQueue({
-                            runtimes : 'html5,html4',
-                            url : '/panel@viat/php/upload.php',
-                            max_file_size : '100mb',
-                            chunk_size : '1mb',
-                            unique_names : true,
-                            dragdrop: false,
-                            resize: {width: 850, height: 530, quality: 80},
-                            filters : [
-                                {title : "Imagenes", extensions : "jpg,gif"}
-                            ]
-                        });
-                    }
-                }]);
-            });
-        });
-    </script>
 
 </head>
 
@@ -186,32 +119,6 @@ $rst_tags=mysql_query("SELECT * FROM ".$tabla_suf."_noticia_tags ORDER BY nombre
                             <div class="floatL mr10">Inferior
                                 <input type="radio" name="tipo_posicion" value="not_inferior" checked="checked" /></div>
                         </div>
-                    </div>
-
-                    <div class="formRow">
-                        <div class="grid3">
-                            <label>Etiquetas:</label>
-                        </div>
-                        <div class="grid9">
-
-                            <span class="grid5" style="margin-bottom: 10px;margin-right: 10px;">
-                                <input id="refreshInput" type="text" />
-
-                            </span>
-                            <span class="gri5" style="font-weight: bold;font-size: 14px;">
-                                <a id="refreshAdd" href="javascript:;">Agregar nueva Etiqueta</a>
-                            </span>
-
-                            <select class="selectMultiple" multiple="multiple" tabindex="6" name="tags[]">
-                                <option></option>
-                                <?php while($fila_tags=mysql_fetch_array($rst_tags)){
-                                        $notTag_id=$fila_tags["id"];
-                                        $notTag_nombre=$fila_tags["nombre"];
-                                ?>
-                                <option value="<?php echo $notTag_id; ?>"><?php echo $notTag_nombre; ?></option>
-                                <?php } ?>
-                            </select>  
-                        </div>             
                     </div>
 
                     <div class="formRow">
