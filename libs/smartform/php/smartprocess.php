@@ -1,13 +1,14 @@
-<?php 
+<?php
+require_once("../../../panel@viat/conexion/conexion.php");
 
     session_start(); 
 	
 	// Enter your name or company name below
-	$receiver_name = "Hello";
+	$receiver_name = "Contacto";
 	
 	// Enter email address below for receiving the form
 	// All Contact messages will be sent there
-	$receiver_email = "marcolopez49@hotmail.com";
+	$receiver_email = $web_correo;
 	
 	// Enter email subject below
 	// This will be your message subject
