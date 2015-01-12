@@ -27,10 +27,10 @@ $rst_guardar=mysql_query("UPDATE ".$tabla_suf."_paginas SET url='$url', titulo='
 if (mysql_errno()!=0){
 	echo "ERROR: <strong>".mysql_errno()."</strong> - ". mysql_error();
 	mysql_close($conexion);
-	header("Location:lista.php?msj=er");
+	header("Location:f-editar.php?id=1&msj=er");
 } else {
 	mysql_close($conexion);
-	header("Location:lista.php?msj=ok");
+	header("Location:f-editar.php?id=1&msj=ok");
 }
 
 ?>
