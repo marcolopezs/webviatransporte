@@ -112,7 +112,12 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                         <article id="article-post" class="cat-sports">
                             
                             <div class="head-image thumb-wrap relative">
+                                <?php if($Noticia_video<>""){ ?>
+                                <iframe width="100%" height="450" src="//www.youtube.com/embed/<?php echo $Noticia_video; ?>?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                <?php }elseif($Noticia_imagen<>""){ ?>
                                 <img src="<?php echo $Noticia_UrlImg; ?>" alt="Responsive image" class="img-responsive" />
+                                <?php } ?>
+
                                 <a href="<?php echo $Noticia_UrlCat; ?>" class="theme">
                                     <?php echo $NotCat_titulo; ?>
                                 </a>
@@ -127,23 +132,6 @@ $Noticia_UrlCat=$web."categoria/".$NotCat_id."/".$NotCat_url;
                             </p>
 
                             <?php echo cortarTextoRH($Noticia_contenido,0,1,0); ?>
-
-                            <div class="tags-link">
-                                <span>Etiquetas:</span>
-
-                                <?php while($fila_tags=mysql_fetch_array($rst_tags)){
-                                    $tags_id=$fila_tags["id"];
-                                    $tags_url=$fila_tags["url"];
-                                    $tags_nombre=$fila_tags["nombre"];
-
-                                    //URL
-                                    $tags_WebURL=$web."tags/".$tags_id."/".$tags_url;
-                                    if(in_array($tags_id, $tags)){
-                                        ?>
-                                        <a href="<?php echo $tags_WebURL; ?>"><?php echo $tags_nombre; ?></a>
-                                    <?php }} ?>
-
-                            </div>
                             
                             <!-- start:article footer -->
                             <footer>
