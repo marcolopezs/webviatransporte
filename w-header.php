@@ -11,7 +11,7 @@
             <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
             <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
             <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
-            <li class="cat-showtime"><a href="historia/">Historia</a></li>
+            <li class="cat-showtime"><a href="categoria/5/historia">Historia</a></li>
             <li class="cat-tech"><a href="eventos">Eventos</a></li>
             <li class="cat-tech"><a href="categoria/4/entrevista">Entrevista</a></li>
             <li class="cat-tech"><a href="contactenos">Contactenos</a></li>
@@ -105,7 +105,7 @@
                     <li class="cat-sports"><a href="categoria/1/noticias">Noticias</a></li>
                     <li class="cat-sports"><a href="categoria/2/seguridad-vial">Seguridad Vial</a></li>
                     <li class="cat-lifestyle"><a href="categoria/3/tecnologia">Tecnología</a></li>
-                    <li class="cat-showtime"><a href="historia/">Historia</a></li>
+                    <li class="cat-showtime"><a href="categoria/5/historia">Historia</a></li>
                     <li class="cat-tech"><a href="eventos">Eventos</a></li>
                     <li class="cat-tech"><a href="categoria/4/entrevista">Entrevista</a></li>
                     <li class="cat-tech"><a href="contactenos">Contactenos</a></li>
