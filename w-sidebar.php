@@ -12,8 +12,10 @@ $Revista_id=$fila_revista["id"];
 $Revista_url=$fila_revista["url"];
 $Revista_titulo=$fila_revista["titulo"];
 $Revista_imagen=$fila_revista["imagen"];
+$Revista_pdf=$fila_revista["pdf"];
 
-$Revista_UrlImg=$we."imagenes/revista/".$fila_revista["imagen"];
+$Revista_UrlImg=$web."imagenes/revista/".$fila_revista["imagen"];
+$Revista_UrlPdf=$web."revista/".$fila_revista["pdf"];
 ?>
 <!-- start:sidebar -->
 <div id="sidebar">
@@ -29,6 +31,11 @@ $Revista_UrlImg=$we."imagenes/revista/".$fila_revista["imagen"];
         <a href="<?php echo $Revista_url; ?>" target="_blank">
             <img src="<?php echo $Revista_UrlImg; ?>" width="300" alt="<?php echo $Revista_titulo; ?>">
         </a>
+
+        <a class="enlaces-revista" target="_blank" href="<?php echo $Revista_UrlPdf; ?>">Descargar PDF</a>
+        <a class="enlaces-revista" target="_blank" href="<?php echo $Revista_url; ?>">Leer en Issuu</a>
+
+        <a class="enlaces-revista-anterior" href="ediciones-anteriores">Ediciones anteriores</a>
     </div>
     <!-- end:advertising -->
     <?php } ?>

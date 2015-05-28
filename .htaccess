@@ -355,6 +355,9 @@ RewriteRule ^evento/([0-9]*)-(.*)$            /eventos-noticia.php?id=$1&url=$2
 #CONTACTENOS
 RewriteRule ^contactenos$                     /contacto.php
 
+#CONTACTENOS
+RewriteRule ^ediciones-anteriores$            /ediciones-anteriores.php
+
 #HISTORIA
 RewriteRule ^(.*)/$                           /paginas.php?url=$1
 

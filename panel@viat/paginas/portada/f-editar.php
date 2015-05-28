@@ -16,6 +16,7 @@ $nota_url=$fila_nota["url"];
 $nota_nombre=$fila_nota["nombre_edicion"];
 $nota_numero=$fila_nota["titulo"];
 $nota_imagen=$fila_nota["imagen"];
+$nota_pdf=$fila_nota["pdf"];
 
 /* FECHA */
 $nota_fecha_pub=explode(" ", $fila_nota["fecha_publicacion"]);
@@ -96,6 +97,21 @@ $nota_pub_hora=$nota_fecha_pub[1];
                             <div class="floarL width60 margin1020">    
                                 <input type="file" class="styled" id="fileInput" name="fileInput" />
                                 <input type="hidden" name="imagen" value="<?php echo $nota_imagen; ?>">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formRow">
+                        <div class="grid3"><label>PDF:</label> </div>
+                        <div class="grid9">
+                            <div class="floatL">
+                                <a href="../../../revista/<?php echo $nota_pdf; ?>" target="_blank">
+                                    Descargar
+                                </a>
+                            </div>
+                            <div class="floarL width60 margin1020">    
+                                <input type="file" class="styled" id="pdfInput" name="pdfInput" />
+                                <input type="hidden" name="pdf" value="<?php echo $nota_pdf; ?>">
                             </div>
                         </div>
                     </div>

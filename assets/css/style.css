@@ -2591,3 +2591,36 @@ body.contacto .alert-success{
     color:#336633; 
     background-color: #d2f7ad;
 }
+
+/*==========================
+REVISTA
+==========================*/
+
+.enlaces-revista{
+    width: 48%;
+    float: left;
+    margin: 2% 1%;
+    background: #fff;
+    padding: 5px;
+}
+
+a.enlaces-revista-anterior {
+    width: 98%;
+    float: left;
+    background: #fff;
+    margin: 1% 1%;
+    padding: 5px;
+}
+
+.edanterior-item{
+    border: none !important;
+}
+
+.edanterior-item .enlaces{
+    width: 90%;
+    display: block;
+    margin: 2% auto;
+    background: #c6c6c6;
+    padding: 5px;
+    text-align: center;
+}

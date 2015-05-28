@@ -80,6 +80,13 @@ $pub_hora=date("H:i:s");
                     </div>
 
                     <div class="formRow">
+                        <div class="grid3"><label>PDF:</label> </div>
+                        <div class="grid9">
+                            <input type="file" class="styled" id="pdfInput" name="pdfInput" />
+                        </div>
+                    </div>
+
+                    <div class="formRow">
                         <div class="grid3"><label>Fecha de publicación:</label></div>
                         <div class="grid4"><input type="text" class="datepicker" name="pub_fecha" value="<?php echo $pub_fecha; ?>" /></div>
                     </div>
